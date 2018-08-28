@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Solution {
 	/*
 	Do not modify this main function.
-	
 	@param      args  The arguments
 	*/
 	public static void main(String[] args) {
@@ -22,7 +21,7 @@ public class Solution {
 	 * @param      b     { parameter_description }
 	 * @param      c     { parameter_description }
 	 */
-	public static void rootsOfQuadraticEquation(final int a,final int b,final int c)
+	public static void rootsOfQuadraticEquation(final int a, final int b, final int c)
 	{
 		double root1;
 		double root2;
