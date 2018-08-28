@@ -10,7 +10,7 @@ public final class Solution {
         //constructor is not used
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
@@ -22,7 +22,7 @@ public final class Solution {
         roots(a, b, c);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      a     { parameter_description }
      * @param      b     { parameter_description }
