@@ -4,9 +4,16 @@ import java.util.Scanner;
  */
 public final class Solution {
     /**
-     *Do not modify this main function.
-     *@param      args  The arguments
-    */
+     * @Constructs the object.
+     */
+    private Solution() {
+        //constructor is not used
+    }
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
