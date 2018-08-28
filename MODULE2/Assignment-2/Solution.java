@@ -36,10 +36,4 @@ public final class Solution {
         root2 = (-b - Math.sqrt(determinant)) / (2 * a);
         System.out.format(root1 + " " + root2);
     }
-    /*
-    Need to write the rootsOfQuadraticEquation
-    function and print the output.
-    */
 }
-
-
