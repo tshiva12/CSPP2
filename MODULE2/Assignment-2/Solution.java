@@ -13,6 +13,13 @@ public class Solution {
 		int c = scan.nextInt();
 		rootsOfQuadraticEquation(a, b, c);
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      a     { parameter_description }
+	 * @param      b     { parameter_description }
+	 * @param      c     { parameter_description }
+	 */
 	public static void rootsOfQuadraticEquation(final int a,final int b,final int c)
 	{
 		double root1;
