@@ -17,12 +17,15 @@ public class Solution {
 	}
 	/*
 	Need to write the power function and print the output.
-	
-	@param      base      The base
-	@param      exponent  The exponent
-	
-	@return     { description_of_the_return_value }
 	*/
+	/**
+	 * { function_description }
+	 *
+	 * @param      base      The base
+	 * @param      exponent  The exponent
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	static long power(final int base,final int exponent)
 	{
 		if(exponent > 0)
