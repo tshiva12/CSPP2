@@ -28,7 +28,7 @@ public final class Solution {
      * @param      b     { parameter_description }
      * @param      c     { parameter_description }
      */
-    public static void roots(final int a, final int b, final int c)
+    public static void roots(final int a, final int b, final int c) 
     {
         double root1;
         double root2;
