@@ -34,6 +34,6 @@ public final class Solution {
         int determinant = b * b - (2 * 2 * a * c);
         root1 = (-b + Math.sqrt(determinant)) / (2 * a);
         root2 = (-b - Math.sqrt(determinant)) / (2 * a);
-        System.out.format(root1 + " " + root2);
+        System.out.println(root1 + " " + root2);
     }
 }
