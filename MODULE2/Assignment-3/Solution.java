@@ -32,10 +32,8 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    static long power(final int base, final int exponent)
-    {
-        if(exponent > 0)
-        {
+    static long power(final int base, final int exponent) {
+        if(exponent > 0) {
             return base * power(base, exponent - 1);
         }
         return 1;
