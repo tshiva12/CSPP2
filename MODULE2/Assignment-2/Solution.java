@@ -7,7 +7,7 @@ public final class Solution {
      *Do not modify this main function.
      *@param      args  The arguments
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
