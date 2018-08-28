@@ -2,16 +2,19 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
-    /*
-    Do not modify this main function.
-    */
+public final class Solution {
     /**
-     * { function_description }
+     * Constructs the object.
+     */
+    private Solution() {
+        //Constructor is not used
+    }
+    /**
+     * { function_description }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
@@ -22,7 +25,7 @@ public class Solution {
     Need to write the power function and print the output.
     */
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      base      The base
      * @param      exponent  The exponent
