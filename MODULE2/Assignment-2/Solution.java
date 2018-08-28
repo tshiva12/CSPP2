@@ -13,7 +13,7 @@ public class Solution {
 		int c = scan.nextInt();
 		rootsOfQuadraticEquation(a, b, c);
 	}
-	public static void rootsOfQuadraticEquation(int a,int b,int c)
+	public static void rootsOfQuadraticEquation(final int a,final int b,final int c)
 	{
 		double root1;
 		double root2;
