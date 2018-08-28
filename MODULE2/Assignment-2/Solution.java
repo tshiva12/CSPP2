@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 /**
  * Class for solution.
@@ -41,3 +42,4 @@ public final class Solution {
     function and print the output.
     */
 }
+
