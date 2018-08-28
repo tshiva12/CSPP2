@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.lang.Math;
-
 public class Solution {
 	/*
 	Do not modify this main function.
