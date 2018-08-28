@@ -2,10 +2,10 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
-    /*
-    Do not modify this main function.
-    @param      args  The arguments
+public final class Solution {
+    /**
+     *Do not modify this main function.
+     *@param      args  The arguments
     */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -25,7 +25,7 @@ public class Solution {
     {
         double root1;
         double root2;
-        int determinant = b * b - (4 * a * c);
+        int determinant = b * b - (2 * 2 * a * c);
         root1 = (-b + Math.sqrt(determinant)) / (2 * a);
         root2 = (-b - Math.sqrt(determinant)) / (2 * a);
         System.out.format(root1 + " " + root2);
