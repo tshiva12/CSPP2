@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Solution {
 	/*
 	Do not modify this main function.
+	
+	@param      args  The arguments
 	*/
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);      
@@ -15,8 +17,13 @@ public class Solution {
 	}
 	/*
 	Need to write the power function and print the output.
+	
+	@param      base      The base
+	@param      exponent  The exponent
+	
+	@return     { description_of_the_return_value }
 	*/
-	static long power(int base,int exponent)
+	static long power(final int base,final int exponent)
 	{
 		if(exponent > 0)
 			return base * power(base,exponent - 1);
