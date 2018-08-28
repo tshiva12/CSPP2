@@ -19,7 +19,7 @@ public final class Solution {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
-        rootsOfQuadraticEquation(a, b, c);
+        roots(a, b, c);
     }
     /**
      * { function_description }
@@ -28,7 +28,7 @@ public final class Solution {
      * @param      b     { parameter_description }
      * @param      c     { parameter_description }
      */
-    public static void rootsOfQuadraticEquation(final int a, final int b, final int c)
+    public static void roots(final int a, final int b, final int c)
     {
         double root1;
         double root2;
