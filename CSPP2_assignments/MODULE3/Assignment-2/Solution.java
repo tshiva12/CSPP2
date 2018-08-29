@@ -1,13 +1,13 @@
 import java.util.Scanner;
 /*
-	Do not modify this main function.
-	*/
+    Do not modify this main function.
+    */
 /**
  * Class for solution.
  */
-public class Solution {
-	/* Fill the main function to print the number of 7's between 1 to n*/
-	/**
+public final class Solution {
+    /* Fill the main function to print the number of 7's between 1 to n*/
+    /**
      * @Constructs the object.
      */
     private Solution() {
@@ -18,7 +18,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
@@ -27,14 +27,14 @@ public class Solution {
         final int a = 10;
         final int b = 7;
         for (i = 1; i <= n; i++) {
-        	j = i;
-        	while(j != 0) {
-        		if(j % a == b) {
-        			count++;
-        		}
-        		j /= a;
-        	}
+            j = i;
+            while (j != 0) {
+                if (j % a == b) {
+                    count++;
+                }
+                j /= a;
+            }
         }
-       	System.out.println(count); 
+        System.out.println(count);
     }
 }
