@@ -20,7 +20,7 @@ public final class Solution {
      */
     public static void main(final String[] args) {
 
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int i = 0, j = 1;
         int count = 0;
