@@ -27,8 +27,8 @@ public class Solution {
 		}
 		for (c=0;c<rows;c++) {
 			for (d=0;d<cols;d++) {
-				System.out.print(sum[c][d]+"\t");
-				System.out.println();
+				System.out.print(sum[c][d]+" ");
+				System.out.println( );
 			}
 		}
 	}
