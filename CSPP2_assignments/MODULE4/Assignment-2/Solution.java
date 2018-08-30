@@ -30,20 +30,20 @@ public final class Solution {
         int colsB = s.nextInt();
         int b[][] = new int[rowsB][colsB];
         for (int c = 0; c < rowsB; c++) {
-            for (int d=0;d<colsB; d++) {
+            for (int d = 0; d < colsB; d++) {
                 b[c][d] = s.nextInt();
             }
         }
-        if(rowsA == rowsB && colsA == colsB) {
+        if (rowsA == rowsB && colsA == colsB) {
             for (int c = 0; c < rowsA; c++) {
-                for (int d=0; d < colsA; d++) {
+                for (int d = 0; d < colsA; d++) {
                     sum[c][d] = a[c][d] + b[c][d];
                     System.out.print(sum[c][d]);
                     if (d < colsA - 1) {
                         System.out.print(" ");
                     }
                 }
-                System.out.println( );
+                System.out.println();
             }
         }
         else {
