@@ -1,7 +1,21 @@
 import java.util.Scanner;
-public class Solution {
+/**
+ * Class function.
+ */
+public final class Solution {
     /* Fill the main function to print resultant of addition of matrices*/
-    public static void main(String[] args) {
+    /**
+     * @Constructs the object.
+     */
+    private Solution() {
+        //constructor is not used
+    }
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int rowsA = s.nextInt();
         int colsA = s.nextInt();
@@ -21,8 +35,8 @@ public class Solution {
             }
         }
         if(rowsA == rowsB && colsA == colsB) {
-            for (int c=0;c<rowsA;c++) {
-                for (int d=0;d<colsA;d++) {
+            for (int c = 0; c < rowsA; c++) {
+                for (int d=0; d < colsA; d++) {
                     sum[c][d] = a[c][d] + b[c][d];
                     System.out.print(sum[c][d]);
                     if (d < colsA - 1) {
