@@ -19,8 +19,8 @@ public final class Solution {
         Scanner s = new Scanner(System.in);
         int rowsA = s.nextInt();
         int colsA = s.nextInt();
-        int sum[][] = new int[rowsA][colsA];
-        int a[][] = new int[rowsA][colsA];
+        int[][] sum = new int[rowsA][colsA];
+        int[][] a = new int[rowsA][colsA];
         for (int c = 0; c < rowsA; c++) {
             for (int d = 0; d < colsA; d++) {
                 a[c][d] = s.nextInt();
@@ -28,7 +28,7 @@ public final class Solution {
         }
         int rowsB = s.nextInt();
         int colsB = s.nextInt();
-        int b[][] = new int[rowsB][colsB];
+        int[][] b = new int[rowsB][colsB];
         for (int c = 0; c < rowsB; c++) {
             for (int d = 0; d < colsB; d++) {
                 b[c][d] = s.nextInt();
