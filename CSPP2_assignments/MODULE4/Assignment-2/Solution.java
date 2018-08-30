@@ -26,7 +26,7 @@ public class Solution {
                     sum[c][d] = a[c][d] + b[c][d];
                     System.out.print(sum[c][d]);
                     if (d < colsA - 1) {
-                        System.out.println(" ");
+                        System.out.print(" ");
                     }
                 }
                 System.out.println( );
