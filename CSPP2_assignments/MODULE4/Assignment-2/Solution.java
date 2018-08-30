@@ -7,16 +7,16 @@ public class Solution {
         int colsA = s.nextInt();
         int sum[][] = new int[rowsA][colsA];
         int a[][] = new int[rowsA][colsA];
-        for (int c=0;c<rowsA;c++) {
-            for (int d=0;d<colsA;d++) {
+        for (int c = 0; c < rowsA; c++) {
+            for (int d = 0; d < colsA; d++) {
                 a[c][d] = s.nextInt();
             }
         }
         int rowsB = s.nextInt();
         int colsB = s.nextInt();
         int b[][] = new int[rowsB][colsB];
-        for (int c=0;c<rowsB;c++) {
-            for (int d=0;d<colsB;d++) {
+        for (int c = 0; c < rowsB; c++) {
+            for (int d=0;d<colsB; d++) {
                 b[c][d] = s.nextInt();
             }
         }
@@ -25,10 +25,9 @@ public class Solution {
                 for (int d=0;d<colsA;d++) {
                     sum[c][d] = a[c][d] + b[c][d];
                     System.out.print(sum[c][d]);
-                    System.out.println( );
                 }
+                System.out.println( );
             }
-
         }
         else {
             System.out.println("not possible");
