@@ -24,7 +24,7 @@ public class Solution {
             for (int c=0;c<rowsA;c++) {
                 for (int d=0;d<colsA;d++) {
                     sum[c][d] = a[c][d] + b[c][d];
-                    System.out.print(sum[c][d] +" ");
+                    System.out.print(sum[c][d]);
                     if (d < colsA - 1) {
                         System.out.println(" ");
                     }
