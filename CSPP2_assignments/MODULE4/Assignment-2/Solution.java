@@ -3,33 +3,35 @@ public class Solution {
 	/* Fill the main function to print resultant of addition of matrices*/
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		int rows = s.nextInt();
-		int cols = s.nextInt();
-		int a[][] = new int[rows][cols];
-		int b[][] = new int[rows][cols];
-		int sum[][] = new int[rows][cols];
-		int c = 0;
-		int d = 0;
-		for (c=0;c<rows;c++) {
-			for (d=0;d<cols;d++) {
+		int rowsA = s.nextInt();
+		int colsA = s.nextInt();
+		int sum[][] = new int[rowsA][colsA];
+		int a[][] = new int[rowsA][colsA];
+		for (int c=0;c<rowsA;c++) {
+			for (int d=0;d<colsA;d++) {
 				a[c][d] = s.nextInt();
 			}
 		}
-		for (c=0;c<rows;c++) {
-			for (d=0;d<cols;d++) {
+		int rowsB = s.nextInt();
+		int colsB = s.nextInt();
+		int b[][] = new int[rowsB][colsB];
+		for (int c=0;c<rowsB;c++) {
+			for (int d=0;d<colsB;d++) {
 				b[c][d] = s.nextInt();
 			}
 		}
-		for (c=0;c<rows;c++) {
-			for (d=0;d<cols;d++) {
-				sum[c][d] = a[c][d] + b[c][d];
+		if(rowsA == rowsB && colsA == colsB) {
+			for (int c=0;c<rowsA;c++) {
+				for (int d=0;d<colsA;d++) {
+					sum[c][d] = a[c][d] + b[c][d];
+					System.out.print(sum[c][d]+" ");
+					System.out.println( );
+				}
 			}
+
 		}
-		for (c=0;c<rows;c++) {
-			for (d=0;d<cols;d++) {
-				System.out.print(sum[c][d]+" ");
-				System.out.println( );
-			}
+		else {
+			System.out.println("not possible");
 		}
 	}
 }
