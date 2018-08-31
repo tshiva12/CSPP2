@@ -1,3 +1,6 @@
+/**
+ * @author tshiva12
+ */
 import java.util.Scanner;
 /**
  * Class for solution.
@@ -10,7 +13,7 @@ public final class Solution {
         //Constructor is not used
     }
     /**
-     * { function_description }.
+     * main function.
      *
      * @param      args  The arguments
      */
@@ -27,10 +30,10 @@ public final class Solution {
     /**
      * { function_description }.
      *
-     * @param      base      The base
-     * @param      exponent  The exponent
+     * @param      base      base is a integer
+     * @param      exponent  exponent is a integer
      *
-     * @return     { description_of_the_return_value }
+     * @return     return the value of output
      */
     static long power(final int base, final int exponent) {
         if (exponent > 0) {
