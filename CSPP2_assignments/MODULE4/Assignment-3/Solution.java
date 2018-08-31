@@ -41,7 +41,7 @@ public final class Solution {
      * @return     return is used to return the value
      */
     public static String binaryToDecimal(final String s) {
-        double sum = 0 ;
+        double sum = 0;
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             int num = Character.getNumericValue(ch);
