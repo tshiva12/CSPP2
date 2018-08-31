@@ -4,8 +4,9 @@ import java.util.Scanner;
 /**
  * Class Solution.
  */
-public final class Solution {/*
-    Do not modify the main function 
+public final class Solution {
+    /*
+    Do not modify the main function
     */
     /**
      * Constructs the object.
