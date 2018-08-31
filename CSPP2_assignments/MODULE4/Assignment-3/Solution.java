@@ -21,7 +21,7 @@ public class Solution
 		}
 	}
 	public static String binaryToDecimal(String s) {
-		double sum = 0;
+		double sum = 1;
 		for (int i = 0; i < s.length(); i++) {
 			char ch = s.charAt(i);
 			int num = Character.getNumericValue(ch);
