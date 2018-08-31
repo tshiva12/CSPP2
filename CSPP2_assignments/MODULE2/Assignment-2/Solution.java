@@ -1,3 +1,6 @@
+/**
+ * @author tshiva12
+ */
 import java.util.Scanner;
 /**
  * Class for solution.
@@ -24,9 +27,9 @@ public final class Solution {
     /**
      * roots of quadriatic expression function.
      *
-     * @param      a     { parameter_description }
-     * @param      b     { parameter_description }
-     * @param      c     { parameter_description }
+     * @param      a     a is a input integer
+     * @param      b     b is a input integer
+     * @param      c     c is a input integer
      */
     public static void roots(final int a, final int b, final int c) {
         double root1;
@@ -37,7 +40,6 @@ public final class Solution {
         System.out.println(root1 + " " + root2);
     }
 }
-// program ends
 
 
 
