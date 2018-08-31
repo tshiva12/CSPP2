@@ -1,3 +1,6 @@
+/**
+ * @author tshiva12
+ */
 import java.util.Scanner;
 /*
     Do not modify this main function.
