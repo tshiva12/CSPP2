@@ -1,7 +1,7 @@
 // Given an String,Write a java method that returns the decimal value
 // for the given binary string.
 /**
- * @author tshiva12
+ * @author tshiva12.
  */
 import java.util.Scanner;
 /**
@@ -29,11 +29,11 @@ public final class Solution {
         System.out.println(reverse);
     }
     /**
-     * Reverse of a string function
+     * Reverse of a string function.
      *
-     * @param      s     s is a input string
+     * @param      s     s is a input string.
      *
-     * @return     return is used to return the output
+     * @return     return is used to return the output.
      */
     public static String reverseString(final String s) {
         String reverse = "";
