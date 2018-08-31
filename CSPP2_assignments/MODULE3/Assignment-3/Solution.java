@@ -1,9 +1,12 @@
+/**
+ * @author tshiva12
+ */
 import java.util.Scanner;
 /*
-    Do not modify this main function.
-    */
+   Do not modify this main function.
+*/
 /**
- * Main class.
+ * Main class Solution.
  */
 public final class Solution {
     /**
@@ -30,10 +33,10 @@ public final class Solution {
     /**
      * gcd of two numbers function.
      *
-     * @param      n1    The n 1
-     * @param      n2    The n 2
+     * @param      n1    n1 is input integer
+     * @param      n2    n2 is input integer
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the value
      */
     public static int gcdoftwonum(final int n1, final int n2) {
         int temp = 0;
@@ -45,6 +48,15 @@ public final class Solution {
         return temp;
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 
