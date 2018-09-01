@@ -27,14 +27,14 @@ final class Solution {
         final int max = 100, min = 50;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                int rem = a[i][j] % max;
-                int round = 0;
-                if (rem >= min) {
-                    round = a[i][j] - rem + max;
-                    a[i][j] = round;
+                int remainder = a[i][j] % max;
+                int temp = 0;
+                if (remainder >= min) {
+                    temp = a[i][j] - remainder + max;
+                    a[i][j] = temp;
                 } else {
-                    round = a[i][j] - rem;
-                    a[i][j] = round;
+                    temp = a[i][j] - remainder;
+                    a[i][j] = temp;
                 }
             }
         }
