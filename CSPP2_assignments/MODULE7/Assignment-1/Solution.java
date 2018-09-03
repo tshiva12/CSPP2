@@ -29,9 +29,8 @@ class InputValidator {
         final int max = 6;
         if (len1 >= max) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 }
 /**
