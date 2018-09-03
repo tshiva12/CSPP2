@@ -1,7 +1,7 @@
 /**
  * @author tshiva12
  */
-import java.util.*;
+import java.util.Scanner;
 /**
  * Class for input validator.
  */
@@ -45,6 +45,8 @@ public final class Solution {
     }
     /**
      * main function.
+     *
+     * @param      args  The string arguments.
      */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
@@ -53,5 +55,8 @@ public final class Solution {
         System.out.println(i.validateData());
     }
 }
+
+
+
 
 
