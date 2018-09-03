@@ -25,8 +25,9 @@ class InputValidator {
      * @return     return the true or false based on the condition
      */
     boolean validateData() {
+        int len1 = input.length();
         final int max = 6;
-        if (input.length() >= max) {
+        if (len1 >= max) {
             return true;
         } else {
             return false;
