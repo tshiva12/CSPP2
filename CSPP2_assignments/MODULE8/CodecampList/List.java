@@ -4,7 +4,7 @@ import java.util.Scanner;
  * main class List.
  */
 public final class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -27,7 +27,6 @@ public final class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -52,7 +51,6 @@ public final class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
 
     // declare a private int size
@@ -82,9 +80,9 @@ public final class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
-        list = new int[10];
+        final int max = 10;
+        list = new int[max];
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -93,7 +91,6 @@ public final class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
      * The method returns void (nothing)
      */
     /**
@@ -110,7 +107,6 @@ public final class List {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
      * The method returns an int. Empty list should return 0.
      */
     /**
@@ -127,7 +123,7 @@ public final class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -152,7 +148,7 @@ public final class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index < size) {
-            for(int i = index; i < size - 1; i++) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -170,7 +166,7 @@ public final class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     /**
@@ -197,7 +193,6 @@ public final class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -223,10 +218,9 @@ public final class List {
                 str += char1;
             }
         }
-        str += list[size - 1] +"]";
+        str += list[size - 1] + "]";
         return str;
-    } 
-    
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -251,7 +245,7 @@ public final class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -265,13 +259,13 @@ public final class List {
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-            if(list[i] == item) {
+            if (list[i] == item) {
                 return i;
             }
         }
         return -1;
     }
-	/**
+    /**
      * main function.
      *
      * @param      args  The arguments
@@ -317,7 +311,9 @@ public final class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default:
+                break;
             }
         }
-	}
+    }
 }
