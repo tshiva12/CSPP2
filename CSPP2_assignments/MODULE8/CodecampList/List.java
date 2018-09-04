@@ -186,7 +186,7 @@ public class List {
                 str += char1;
             }
         }
-        str += "]";
+        str += list[size -1] +"]";
         return str;
     } 
     
