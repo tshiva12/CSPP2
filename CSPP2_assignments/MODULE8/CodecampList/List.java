@@ -94,7 +94,7 @@ public final class List {
      * The method returns void (nothing)
      */
     /**
-     * add items.
+     * add items to the list.
      *
      * @param      item  item is integer.
      */
@@ -265,6 +265,34 @@ public final class List {
         }
         return -1;
     }
+    public void add(final int index, final int item) {
+        final int list1 = 20;
+        int[] array1 = new int[list1];
+        array1 = list.clone();
+        for (int j = index + 1; j < size + 1; j++) {
+            list[j] = array1[j - 1];
+        }
+        list[index] = item;
+        size += 1;
+    }
+    public int count(final int item) {
+        int count = 0;
+        for (int j = 0; j < size; j++) {
+            if (item == list[j]) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+    public void addAll(final int[] items) {
+        int length = items.length + size;
+        int temp = 0;
+        for (int i = size; i < length; i++) {
+            list[i] = items[temp];
+            temp += 1;
+        }
+        size = length;
+    }
     /**
      * main function.
      *
@@ -285,7 +313,11 @@ public final class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                l.add(Integer.parseInt(tokens[1]));
+                if (tokens.length <= 2) {
+                    l.add(Integer.parseInt(tokens[1]));
+                } else {
+                    l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                }
                 break;
                 case "size":
                 // invoke size method and print the list size
@@ -311,6 +343,17 @@ public final class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                case "count":
+                System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                case "addAll":
+                int[] temp = new int[tokens.length - 1];
+                int temp1 = 0,length = tokens.length;
+                for (int i = 1; i < length; i++) {
+                    temp[temp1] = Integer.parseInt(tokens[i]);
+                    temp1 += 1;
+                }
+                l.addAll(temp);
                 default:
                 break;
             }
