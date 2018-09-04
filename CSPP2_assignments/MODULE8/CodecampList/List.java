@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * main class List.
  */
-public class List {
+public final class List {
 	//Implement all the methods mentioned to build a ListADT
 
     /*
@@ -101,7 +101,7 @@ public class List {
      *
      * @param      item  item is integer.
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         list[size] = item;
         size++;
@@ -148,12 +148,12 @@ public class List {
      *
      * @param      index  The index is integer.
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index < size) {
+        if (index < size) {
             for(int i = index; i < size - 1; i++) {
-                list[i] = list[i+1];
+                list[i] = list[i + 1];
             }
             size--;
             list[size] = 0;
@@ -180,9 +180,9 @@ public class List {
      *
      * @return     returns the index value of list.
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
-        if(index > -1 && index < size) {
+        if (index > -1 && index < size) {
             return list[index];
         }
         return -1;
@@ -217,13 +217,13 @@ public class List {
         // Replace the code below
         String str = "[";
         String char1 = ",";
-        for (int i = 0; i < size-1; i++) {
+        for (int i = 0; i < size - 1; i++) {
             str += Integer.toString(list[i]);
-            if (i < size-1) {
+            if (i < size - 1) {
                 str += char1;
             }
         }
-        str += list[size -1] +"]";
+        str += list[size - 1] +"]";
         return str;
     } 
     
@@ -240,10 +240,10 @@ public class List {
      *
      * @return     return true or false based on the condition.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-            if(list[i] == item) {
+            if (list[i] == item) {
                 return true;
             }
         }
@@ -262,7 +262,7 @@ public class List {
      *
      * @return     returns the value of index.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if(list[i] == item) {
@@ -276,7 +276,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
