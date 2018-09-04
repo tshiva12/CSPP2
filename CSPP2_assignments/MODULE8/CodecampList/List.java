@@ -1,6 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+ * main class List.
+ */
 public class List {
 	//Implement all the methods mentioned to build a ListADT
 
@@ -29,6 +31,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+     * list is private.
+     */
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -53,11 +58,16 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+     * size is private.
+     */
     private int size;
-
     /*
-     * The purpose of the constructor is to initialize the
-     * class variables with some default values.
+     * The purpose of the constructor is to initialize the class variables with
+     * some default values.
+     */
+    /**
+     * Constructs the object list.
      */
     public List() {
 
@@ -86,6 +96,11 @@ public class List {
      * 
      * The method returns void (nothing)
      */
+    /**
+     * add items.
+     *
+     * @param      item  item is integer.
+     */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
         list[size] = item;
@@ -97,6 +112,11 @@ public class List {
      * to the objects outside the list
      * 
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * size of list.
+     *
+     * @return     return the size of list.
      */
     public int size() {
         // replace the code below to implement the size method
@@ -123,6 +143,11 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * removes the item of particular index.
+     *
+     * @param      index  The index is integer.
+     */
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -147,6 +172,13 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * get uses to give list index.
+     *
+     * @param      index  The index
+     *
+     * @return     returns the index value of list.
      */
     public int get(int index) {
         // Replace the code below to write the code for get
@@ -176,6 +208,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         String str = "[";
@@ -196,6 +233,13 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * perform the boolen operation.
+     *
+     * @param      item  The item
+     *
+     * @return     return true or false based on the condition.
+     */
     public boolean contains(int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -211,6 +255,13 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     returns the value of index.
+     */
     public int indexOf(int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -220,8 +271,12 @@ public class List {
         }
         return -1;
     }
-
-	public static void main(String[] args) {
+	/**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
