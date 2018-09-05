@@ -80,7 +80,7 @@ public final class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
-        final int max = 20;
+        final int max = 10;
         list = new int[max];
     }
     /*
