@@ -80,7 +80,7 @@ public final class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
-        final int max = 10;
+        final int max = 20;
         list = new int[max];
     }
     /*
@@ -265,6 +265,12 @@ public final class List {
         }
         return -1;
     }
+    /**
+     * add method add the items with index values.
+     *
+     * @param      index  The index in integer
+     * @param      item   The item is integer
+     */
     public void add(final int index, final int item) {
         final int list1 = 20;
         int[] array1 = new int[list1];
@@ -275,6 +281,13 @@ public final class List {
         list[index] = item;
         size += 1;
     }
+    /**
+     * count method count the items.
+     *
+     * @param      item  The item is integer
+     *
+     * @return     return the count value
+     */
     public int count(final int item) {
         int count = 0;
         for (int j = 0; j < size; j++) {
@@ -284,6 +297,11 @@ public final class List {
         }
         return count;
     }
+    /**
+     * Adds all add the all items to a list.
+     *
+     * @param      items  The items is a integer
+     */
     public void addAll(final int[] items) {
         int length = items.length + size;
         int temp = 0;
@@ -344,11 +362,11 @@ public final class List {
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
                 case "count":
-                System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
                 int[] temp = new int[tokens.length - 1];
-                int temp1 = 0,length = tokens.length;
+                int temp1 = 0, length = tokens.length;
                 for (int i = 1; i < length; i++) {
                     temp[temp1] = Integer.parseInt(tokens[i]);
                     temp1 += 1;
