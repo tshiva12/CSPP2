@@ -140,6 +140,15 @@ public final class List {
      * The method returns void (nothing)
      */
     /**
+     * Constructs the object.
+     *
+     * @param      capacity  The capacity
+     */
+    public List(int capacity) {
+        size = 0;
+        list = new int[capacity];
+    }
+    /**
      * removes the item of particular index.
      *
      * @param      index  The index is integer.

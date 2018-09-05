@@ -45,7 +45,7 @@ public final class Fibonacci {
     public static List fib(final int n) {
         // todo - complete this method
         int a = 0, b = 1;
-        List list1 = new List();
+        List list1 = new List(n);
         list1.add(a);
         list1.add(b);
         for (int i = 0; i < n - 2; i++) {
