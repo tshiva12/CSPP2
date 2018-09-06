@@ -45,7 +45,7 @@ final class Student {
         return this.getName().equals(that.getName());
     }
     /**
-     * hash function
+     * hash function.
      *
      * @return     return 0.
      */
