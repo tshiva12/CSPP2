@@ -30,7 +30,7 @@ public final class List {
     // that's the job of the List constructor
     //
     /**
-     * int is private
+     * int is private.
      */
     private int[] list;
     /*
@@ -260,7 +260,7 @@ public final class List {
     public String toString() {
         if (size == 0) {
             return "[]";
-        }  
+        }
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
