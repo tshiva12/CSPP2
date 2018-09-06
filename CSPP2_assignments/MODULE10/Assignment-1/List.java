@@ -28,6 +28,9 @@ public final class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+     * int is private
+     */
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -50,6 +53,9 @@ public final class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+     * size is private
+     */
     private int size;
     /*
      * The purpose of the constructor is to initialize the
@@ -79,7 +85,7 @@ public final class List {
      * raises a Index Out of Bounds Exception
      * There will be some clients of the ADT that will require
      * the list to contain n elements which is known
-     * at the time of creating the list. 
+     * at the time of creating the list.
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
@@ -114,8 +120,7 @@ public final class List {
             list[size++] = item;
         } else {
             resize(item);
-        }   
-    }
+        }    }
     /*
      * Resize the list
      * Sometimes the clients of the ADT won't know the expected list capacity
@@ -131,14 +136,16 @@ public final class List {
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
      * with the contents of the original array.
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize().
+     * Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object Oriented Programming
+     * to answer these questions :-)
      */
     /**
      * resize gives the double size.
@@ -154,7 +161,6 @@ public final class List {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
      * The method returns an int. Empty list should return 0.
      */
     /**
@@ -169,7 +175,7 @@ public final class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -193,8 +199,8 @@ public final class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size) {
-            for(int i = index; i < size - 1; i++) {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -210,7 +216,7 @@ public final class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     /**
@@ -221,7 +227,7 @@ public final class List {
      * @return     return index value.
      */
     public int get(final int index) {
-        if(index < 0 || index >= size) {
+        if (index < 0 || index >= size) {
             return -1;
         } else {
             return list[index];
@@ -251,11 +257,12 @@ public final class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if(size == 0)
+        if (size == 0) {
             return "[]";
+        }  
         String str = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
@@ -278,7 +285,7 @@ public final class List {
         return indexOf(item) == -1;
     }
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -290,18 +297,21 @@ public final class List {
      * @return     return the index of item value.
      */
     public int indexOf(final int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
-   /*Inserts all the elements of specified int 
+   /*Inserts all the elements of specified int
     array to the end of list*/
     /**
      * addAll add the list of items into a list.
+     *
+     * @param      items  The items are integer list.
      */
-    public void addAll(final int items[]) {
+    public void addAll(final int[] items) {
         // int length = items.length + size;
         // int temp = 0;
         // for (int i = size; i < length; i++) {
@@ -311,10 +321,10 @@ public final class List {
         // size = length;
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
-        } 
+        }
     }
-     /* 
-        Inserts the specified element at the specified index 
+     /*
+        Inserts the specified element at the specified index
     by moving all the elements to the right.
         The method returns void (nothing)
      */
@@ -324,7 +334,7 @@ public final class List {
      * @param      index  The index is integer.
      * @param      item   The item is integer.
      */
-    public void add(final int index,final int item) {
+    public void add(final int index, final int item) {
         if (index >= 0) {
             for (int i = size; i > index; i--) {
             list[i] = list[i - 1];
