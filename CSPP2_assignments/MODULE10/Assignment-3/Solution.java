@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * Class for student.
  */
-class Student {
+final class Student {
     /**
      * string variable name.
      */
