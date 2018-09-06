@@ -44,8 +44,13 @@ final class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
+    /**
+     * hash function
+     *
+     * @return     return 0.
+     */
     public int hashCode() {
-    	return 0;
+        return 0;
     }
     /**
      * Returns a string representation of the object.
