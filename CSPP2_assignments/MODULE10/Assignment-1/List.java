@@ -283,6 +283,9 @@ public class List {
         The method returns void (nothing)
      */
     public void add(int index,int item) {
+        if (index < 0) {
+            System.out.println("Negative Index Exception");
+        }
         for (int i = size; i > index; i--) {
             list[i] = list[i-1];
         }
