@@ -14,7 +14,7 @@ final class Student {
      *
      * @param      newname  The name is string.
      */
-    public Student(final String newname) {
+    Student(final String newname) {
     //A constructor used to initialize the instance variables
         this.name = newname;
     }
@@ -43,6 +43,9 @@ final class Student {
 
         Student that = (Student) other;
         return this.getName().equals(that.getName());
+    }
+    public int hashCode() {
+    	return 0;
     }
     /**
      * Returns a string representation of the object.
