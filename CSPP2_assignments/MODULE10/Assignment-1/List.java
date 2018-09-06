@@ -5,7 +5,7 @@ import java.util.Arrays;
  * Main class List.
  */
 public final class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -316,7 +316,7 @@ public final class List {
     }
      /* 
         Inserts the specified element at the specified index 
-	by moving all the elements to the right.
+    by moving all the elements to the right.
         The method returns void (nothing)
      */
     /**
@@ -354,7 +354,7 @@ public final class List {
         }
         return count;
     }
-	/**
+    /**
      * main function.
      *
      * @param      args  The arguments
@@ -374,13 +374,13 @@ public final class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if((tokens.length)==2){
+                if((tokens.length) == 2){
                 String[] t = tokens[1].split(",");
-                if(t.length==1){
+                if(t.length == 1){
                     l.add(Integer.parseInt(tokens[1]));
                 }
                 else{
-                    if(t.length>1)
+                    if(t.length > 1)
                         l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
                     }
                 }
@@ -389,11 +389,11 @@ public final class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                if(tokens.length==2){
+                if(tokens.length == 2){
                 String[] t1 = tokens[1].split(",");
-                int temp[]=new int[t1.length];
-                for(int i=0;i<temp.length;i++)
-                    temp[i]=Integer.parseInt(t1[i]);
+                int temp[] = new int[t1.length];
+                for(int i = 0; i < temp.length; i++)
+                    temp[i] = Integer.parseInt(t1[i]);
                 l.addAll(temp);
                 }
                 break;
@@ -425,5 +425,5 @@ public final class List {
                 break;
             }
         }
-	}
+    }
 }
