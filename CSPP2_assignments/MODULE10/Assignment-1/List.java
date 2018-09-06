@@ -244,7 +244,6 @@ public final class List {
      * Example: [1,2,3,0,0,0,0,0,0,0]
      * toString should only return the items in the list and
      * not all the elements of the array.
-     *
      */
     /**
      * Returns a string representation of the object.
@@ -275,7 +274,7 @@ public final class List {
      *
      * @return     return the item.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
     /*
@@ -290,7 +289,7 @@ public final class List {
      *
      * @return     return the index of item value.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for(int i = 0; i < size; i++) {
             if(item == list[i])
                 return i;
@@ -302,7 +301,7 @@ public final class List {
     /**
      * addAll add the list of items into a list.
      */
-    public void addAll(int items[]) {
+    public void addAll(final int items[]) {
         // int length = items.length + size;
         // int temp = 0;
         // for (int i = size; i < length; i++) {
@@ -325,27 +324,25 @@ public final class List {
      * @param      index  The index is integer.
      * @param      item   The item is integer.
      */
-    public void add(int index,int item) {
+    public void add(final int index,final int item) {
         if (index >= 0) {
             for (int i = size; i > index; i--) {
-            list[i] = list[i-1];
+            list[i] = list[i - 1];
         }
         list[index] = item;
         size++;
         } else {
             System.out.println("Negative Index Exception");
         }
-        
     }
     /* Returns the count of occurances of a given item in the list*/
     /**
-     * count the duplicate values in the list
-     * 
+     * count the duplicate values in the list.
      * @param      item  The item is integer.
      *
      * @return     return the count of items.
      */
-    public int count(int item) {
+    public int count(final int item) {
         int count = 0;
         for (int j = 0; j < size; j++) {
             if (item == list[j]) {
@@ -359,7 +356,7 @@ public final class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -379,8 +376,9 @@ public final class List {
                 if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
                 } else {
-                    if (t.length > 1)
-                        l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                    if (t.length > 1) {
+                        l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                    }
                     }
                 }
                 break;
@@ -390,9 +388,10 @@ public final class List {
                 case "addAll":
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int temp[] = new int[t1.length];
-                for (int i = 0; i < temp.length; i++)
+                int[] temp = new int[t1.length];
+                for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
+                }
                 l.addAll(temp);
                 }
                 break;
