@@ -121,7 +121,8 @@ public final class List {
             list[size++] = item;
         } else {
             resize(item);
-        }    }
+        }    
+    }
     /*
      * Resize the list
      * Sometimes the clients of the ADT won't know the expected list capacity
