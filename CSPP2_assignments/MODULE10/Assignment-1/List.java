@@ -205,7 +205,6 @@ public class List {
      */
     public int get(int index) {
         if(index < 0 || index >= size) {
-            System.out.println("Negative Index Exception");
             return -1;
         } else {
             return list[index];
