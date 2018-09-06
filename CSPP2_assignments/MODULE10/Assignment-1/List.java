@@ -121,7 +121,7 @@ public final class List {
             list[size++] = item;
         } else {
             resize(item);
-        }    
+        }
     }
     /*
      * Resize the list
