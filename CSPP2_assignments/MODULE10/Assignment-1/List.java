@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class List {
 	//Implement all the methods mentioned to build a ListADT
@@ -70,13 +71,13 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
+        size = 0;
         list = new int[10];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        size = 0;
     }
 
     /*
@@ -111,7 +112,11 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
-        list[size++] = item;   
+        if (size < list.length) {
+            list[size++] = item;
+        } else {
+            resize(item);
+        }   
     }
 
     /*
@@ -144,8 +149,10 @@ public class List {
      * You know enough of Object Oriented Programming to answer these questions :-)
      *
      */
-
-    // todo create resize method
+    public void resize(final int item) {
+        list = Arrays.copyOf(list, size * 2);
+        list[size++] = item;
+    }
 
     /*
      * The size method returns the value of the size.
@@ -268,13 +275,16 @@ public class List {
    /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(int items[]) {
-        int length = items.length + size;
-        int temp = 0;
-        for (int i = size; i < length; i++) {
-            list[i] = items[temp];
-            temp += 1;
-        }
-        size = length; 
+        // int length = items.length + size;
+        // int temp = 0;
+        // for (int i = size; i < length; i++) {
+        //     list[i] = items[temp];
+        //     temp += 1;
+        // }
+        // size = length;
+        for (int i = 0; i < items.length; i++) {
+            add(items[i]);
+        } 
     }
 
      /* 
