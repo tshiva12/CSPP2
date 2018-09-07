@@ -518,8 +518,8 @@ public final class List {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": 
-                    if (tokens.length != 2) { 
+                case "subList":
+                    if (tokens.length != 2) {
                         break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
