@@ -200,7 +200,7 @@ public class List<E> {
      indicates the endIndex.
      */
     public List subList(int start, int end) {
-        if (start <= 0) {
+        if (start < 0) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
