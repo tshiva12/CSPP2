@@ -422,6 +422,16 @@ public final class List {
      */
     public boolean equals(final List newlist) {
     // Replace the code below
+        // List list1 = new List();
+        // for (int i = 0; i<newlist.length; i++) {
+        //     for (int j = i + 1; j<newlist.length; j++) {
+        //         if (newlist[i] > newlist[j]) {
+        //             int temp = newlist[i];
+        //             newlist[i] = newlist[j];
+        //             newlist[j] = temp;
+        //         }
+        //     }
+        // }
         if (Arrays.equals(newlist.list, list)) {
             return true;
         }
