@@ -367,11 +367,15 @@ public final class List {
      Removes all of its elements that are contained in the specified int 
      array.    
     */
-     public void removeAll(int[] items) {
-     	for (int i = 0; i < items.length + 1; i++) {
-     			remove(items[i]);
+    public void removeAll(int[] items) {
+     	for (int i = 0; i < items.length; i++) {
+     		for (int j =0; j < size; j++) {
+     			if (items[i] == list[j]) {
+     				remove(j);
+     			}
+     		}     			
      	}
-     }
+    }
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
@@ -381,15 +385,27 @@ public final class List {
     */
     public List subList(int start, int end) {
     // write the logic for subList
-    return new List();
+    	if (start < 0 || end > size) {
+    		System.out.println("Index Out of Bounds Exception");
+    		return null;
+    	} else {
+    		List list1 = new List();
+    		for(int i = start; i < end; i++) {
+    			list1.add(list[i]);
+    		}
+    		return list1;
+    	}
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list1) {
+    public boolean equals(List newlist) {
     // Replace the code below
-    return true;
+    	if (Arrays.equals(newlist.list, list)) {
+    		return true;
+    	}
+    	return false;
     }
     /*
     * Removes all the elements from list
@@ -398,6 +414,9 @@ public final class List {
     */
     public void clear() {
     // write the logic for clear.
+    	for (int i = 0; i < size; i++) {
+    		list[i] = 0;
+    	}
     	size = 0;
     }
     /**
