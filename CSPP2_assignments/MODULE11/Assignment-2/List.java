@@ -186,7 +186,7 @@ public class List<E> {
         // write the logic
         for (int i = 0; i < items.length; i++) {
             for (int j = 0; j < size; j++) {
-                if (items[i].equals(list[j])) {
+                if (items[i].equals(this.get(j))) {
                     remove(j);
                     j--;
                 }
@@ -222,7 +222,7 @@ public class List<E> {
         }
         List<E> list1 = new List();
         for (int i = start; i < end; i++) {
-            list1.add(list[i]);
+            list1.add(this.get(i));
         }
         return list1;
     }
@@ -231,7 +231,7 @@ public class List<E> {
     */
 
     public boolean equals(List<E> listdata) {
-        return list.toString().equals(listdata.toString());
+        return this.toString().equals(listdata.toString());
     }
     /*Removes all the elements from list*/
     public void clear() {
