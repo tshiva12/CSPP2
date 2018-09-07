@@ -364,10 +364,15 @@ public final class List {
         return count;
     }
     /*
-     Removes all of its elements that are contained in the specified int 
-     array.    
+     Removes all of its elements that are contained in the specified int
+     array.
     */
-    public void removeAll(int[] items) {
+    /**
+     * Removes all.
+     *
+     * @param      items  The items are array Integers.
+     */
+    public void removeAll(final int[] items) {
      	for (int i = 0; i < items.length; i++) {
      		for (int j =0; j < size; j++) {
      			if (items[i] == list[j]) {
@@ -383,7 +388,15 @@ public final class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
-    public List subList(int start, int end) {
+    /**
+     * SubList method.
+     *
+     * @param      start  The start
+     * @param      end    The end
+     *
+     * @return     return sublist array.
+     */
+    public List subList(final int start, final int end) {
     // write the logic for subList
     	if (start < 0 || end > size) {
     		System.out.println("Index Out of Bounds Exception");
@@ -400,7 +413,14 @@ public final class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List newlist) {
+    /**
+     * Equals method compare list with another. 
+     *
+     * @param      newlist  The newlist
+     *
+     * @return     returns boolean value.
+     */
+    public boolean equals(final List newlist) {
     // Replace the code below
     	if (Arrays.equals(newlist.list, list)) {
     		return true;
@@ -412,6 +432,9 @@ public final class List {
     * Think about this case and make the method
     * the simpler.
     */
+    /**
+     * Clear method clear all the elements in list.
+     */
     public void clear() {
     // write the logic for clear.
     	for (int i = 0; i < size; i++) {
