@@ -4,210 +4,199 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author     :
+ * @author :
  */
 class Set {
     //your code goes here...
-    //Good luck :-)
+    //Good luck :-).
     /**
-     * integer array is private.
-     */
-    private int[] list;
+    declaring an int array.
+    **/
+    private int[] set;
     /**
-     * integer size is private.
-     */
+     * var_description.
+     **/
     private int size;
     /**
      * Constructs the object.
-     */
+     **/
+
+    /**
+     * Constructs the object.
+     **/
     Set() {
         final int num = 10;
-        list = new int[num];
+        set = new int[num];
         size = 0;
     }
     /**
-     * add item into a list.
+     * Constructs the object.
+     *
+     * @param      cap   The capability
+     **/
+    Set(final int cap) {
+        set = new int[cap];
+        size = 0;
+    }
+    /**
+     * Constructs the object.
+     *
+     * @param      elements  The elements
+     **/
+    Set(final int[] elements) {
+    this.set = new int[elements.length];
+    for (int pos = 0; pos < elements.length; pos++) {
+        this.set[pos] = elements[pos];
+    }
+}
+    /**
+     * function_description.
+     **/
+    private void resize() {
+        int cap = 2 * size;
+        set = Arrays.copyOf(set, cap);
+    }
+
+    /**
+     * function_description.
      *
      * @param      item  The item
-     */
-    public void addval(final int item) {
-        if (size >= list.length) {
+     **/
+    public void add(final int item) {
+        int flag = 0;
+        if (size == set.length) {
             resize();
         }
-        list[size] = item;
-        size++;
+        if (contains(item)) {
+            flag = 0;
+        } else {
+            set[size++] = item;
+        }
     }
-    /**
-     * add an array of elements.
-     *
-     * @param      newArray  The new array
-     */
-    public void add(final int[] newArray) {
-        for (int i = 0; i < newArray.length; i++) {
-            addval(newArray[i]);
 
-        }
-    }
     /**
-     * resize the size value.
-     */
-    public void resize() {
-        list = Arrays.copyOf(list, list.length * 2);
-    }
-    /**
-     * contains says that item is there in list or not.
-     *
-     * @param      item  The item
-     *
-     * @return     return boolean value.
-     */
-    public boolean contains(final int item) {
-        for (int i = 0; i < size; i++) {
-            if (list[i] == item) {
-                return true;
-            }
-        }
-        return false;
-    }
-    /**
-     * size of list.
+     * function_description.
      *
      * @return     { description_of_the_return_value }
-     */
+     **/
     public int size() {
         return size;
     }
     /**
-     * cartesianProduct.
-     *
-     * @param      newArray1  The new array 1
-     *
-     * @return     return the newArray.
-     */
-    public int[] cartesianProduct(final int[] newArray1) {
-        return newArray1;
-    }
-    /**
-     * intersection.
-     *
-     * @param      newArray2  The new array 2
-     * @param      newArray3  The new array 3
-     */
-    public void intersection(final int[] newArray2, final int[] newArray3) {
-        final int value1 = 10;
-        int[] subArray = new int[value1];
-        for (int i = 0; i < newArray2.length; i++) {
-            for (int j = 0; j < newArray3.length; j++) {
-                if (newArray2[i] == newArray3[i]) {
-                    addval(subArray[i]);
-                }
-            }
-        }
-    }
-    /**
-     * retainAll.
-     *
-     * @param      newArray3  The new array 3
-     * @param      newArray4  The new array 4
-     */
-    public void retainAll(final int[] newArray3, final int[] newArray4) {
-        final int value2 = 10;
-        int[] subArray1 = new int[value2];
-        for (int i = 0; i < newArray3.length; i++) {
-            for (int j = 0; j < newArray4.length; j++) {
-                if (newArray3[i] == newArray4[i]) {
-                    addval(subArray1[i]);
-                }
-            }
-        }
-    }
-    /**
-     * add item at integer value.
-     *
-     * @param      index  The index
-     * @param      item   The item
-     */
-    public void addval(final int index, final int item) {
-        if (index >= 0) {
-            for (int i = size; i > index; i--) {
-            list[i] = list[i - 1];
-        }
-        list[index] = item;
-        size++;
-        } else {
-            System.out.println("Negative Index Exception");
-        }
-    }
-    /**
-     * set.
-     */
-    public void set() {
-        final int value = 10;
-        int[] set1 = new int[value];
-        int siz = 0, f;
-        int count;
-        String st;
-        for (int i = 0; i < size; i++) {
-            count = count(list[i]);
-            if (count == 1) {
-                set1[siz] = list[i];
-                siz++;
-            }
-            if (count > 1) {
-                f = 0;
-                for (int j = 0; j < siz; j++) {
-                    if (set1[j] == list[i]) {
-                        f = 1;
-                    }
-                }
-                if (f == 0) {
-                    set1[siz] = list[i];
-                    siz++;
-                }
-            }
-        }
-        st = "{";
-        for (int i = 0; i < siz - 1; i++) {
-            st += set1[i] + ", ";
-        }
-        st = st + set1[siz - 1] + "}";
-        System.out.println(st);
-    }
-    /**
-     * count of duplicate items.
+     * function_description.
      *
      * @param      item  The item
      *
-     * @return     returns the count value.
-     */
-    public int count(final int item) {
+     * @return     { description_of_the_return_value }
+     **/
+    public boolean contains(final int item) {
+        // return true;
         int count = 0;
-        for (int j = 0; j < size; j++) {
-            if (item == list[j]) {
-                count += 1;
+        for (int i = 0; i < size; i++) {
+            if (set[i] == item) {
+                count++;
             }
         }
-        return count;
+        if (count == 1) {
+            return true;
+        }
+        return false;
     }
     /**
      * Returns a string representation of the object.
      *
      * @return     String representation of the object.
-     */
+     **/
     public String toString() {
+        // return "string";
         if (size == 0) {
             return "{}";
         }
-        String str = "{";
-        int i = 0;
-        for (i = 0; i < size - 1; i++) {
-            str = str + list[i] + ", ";
+       String res = "{";
+        for (int i = 0; i < size - 1; i++) {
+            res = res + set[i] + ", ";
         }
-        str = str + list[i] + "}";
-        return str;
+        res += set[size - 1] + "}";
+        return res;
     }
-
-
+    /**
+     * function_description.
+     *
+     * @param      item  The item
+     */
+    public void add(final int[] item) {
+        // int len = set.length + size;
+     //    int temp = 0;
+     //    for (int i = size; i < len; i++) {
+     //        if (size == set.length) {
+     //        resize();
+     //    }
+     //    set[i] = item[temp];
+     //    temp += 1;
+     //    size += 1;
+     //    }
+        for (int i:item) {
+            add(i);
+    }
+    }
+    /**
+     * function_description.
+     *
+     * @param      a     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     **/
+    public String intersection(final Set a) {
+        int members = 0;
+        int x = 0;
+        for (int i = 0; i < set.length; i++) {
+        if (a.contains(set[i])) {
+            members++;
+        }
+        }
+        // System.out.println(members);
+        int[] newMembers = new int[members];
+        int position = 0;
+        for (int i = 0; i < set.length; i++) {
+        if (a.contains(set[i])) {
+            // System.out.println(set[i]);
+            x = set[i];
+            newMembers[position++] = set[i];
+        }
+    }
+    int n = newMembers.length;
+    if (n == 0) {
+        System.out.print("{}");
+    } else {
+        System.out.print("{");
+        for (int p = 0; p < n - 1; p++) {
+            System.out.print(newMembers[p] + ", ");
+        }
+        System.out.print(newMembers[n - 1] + "}");
+    }
+    // return new Set(newMembers);
+        return "";
+    }
+    /**
+     * function_description.
+     *
+     * @param      a  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public String retainAll(final int[] a) {
+        return null;
+    }
+    /**
+     * function_description.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[][] cartesianProduct(final Set item) {
+        return null;
+    }
 }
 /**
  * Solution class for code-eval.
@@ -268,41 +257,35 @@ public final class Solution {
                 case "add":
                 int[] intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
-                    s.addval(intArray[0]);
-                    s.set();
+                    s.add(intArray[0]);
                 } else {
                     s.add(intArray);
-                    s.set();
                 }
                 break;
-                // case "intersection":
-                // s = new Set();
-                // Set t = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // t.add(intArray);
-                // System.out.println(s.intersection(t));
-                // break;
-                // case "retainAll":
-                // s = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // System.out.println(s.retainAll(intArray));
-                // break;
-                // case "cartesianProduct":
-                // s = new Set();
-                // t = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // t.add(intArray);
-                // System.out.println(Arrays.deepToString(
-                // s.cartesianProduct(t)));
-                // break;
-                case "set":
-                    s.set();
+                case "intersection":
+                s = new Set();
+                Set t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(s.intersection(t));
+                break;
+                case "retainAll":
+                s = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
+                break;
+                case "cartesianProduct":
+                s = new Set();
+                t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
                 default:
                 break;
@@ -310,6 +293,3 @@ public final class Solution {
         }
     }
 }
-
-
-
