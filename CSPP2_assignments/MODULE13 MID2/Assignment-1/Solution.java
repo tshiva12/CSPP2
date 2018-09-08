@@ -11,43 +11,50 @@ class Set {
     //Good luck :-)
     private int[] list;
     private int size;
+    /**
+     * Constructs the object.
+     */
     public Set() {
     	final int num = 10;
     	list = new int[num];
     	size = 0;
     }
+    /**
+     * add item into a list.
+     *
+     * @param      item  The item
+     */
     public void addval(int item) {
     	if (size >= list.length) {
     		resize();
     	}
-    	for (int i = 0; i < size; i++) {
-    		if (item == list[i]) {
-    			remove(list[i]);
-    			list[size] = item;
-    		}
-    	}
+    	list[size] = item;
     	size++;
-    	// set(item);
     }
+    /**
+     * add an array of elements.
+     *
+     * @param      newArray  The new array
+     */
     public void add(int[] newArray) {
     	for (int i = 0; i < newArray.length; i++) {
     		addval(newArray[i]);
 
     	}
     }
+    /**
+     * resize the size value.
+     */
     public void resize() {
     	list = Arrays.copyOf(list, list.length * 2);
     }
-    public void remove(int index) {
-    	if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
-                list[i] = list[i + 1];
-            }
-            size--;
-        } else {
-            System.out.println("Invalid Position Exception");
-        }
-    }
+    /**
+     * contains says that item is there in list or not.
+     *
+     * @param      item  The item
+     *
+     * @return     return boolean value.
+     */
     public boolean contains(int item) {
     	for (int i = 0; i < size; i++) {
     		if (list[i] == item) {
@@ -56,9 +63,15 @@ class Set {
     	}
     	return false;
     }
+    /**
+     * size of list.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
     	return size;
     }
+
     public int[] cartesianProduct(int[] newArray1) {
     	return newArray1;
     }
@@ -82,6 +95,12 @@ class Set {
     		}
     	}
     }
+    /**
+     * add item at integer value.
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
     public void addval(final int index, final int item) {
         if (index >= 0) {
             for (int i = size; i > index; i--) {
@@ -93,37 +112,47 @@ class Set {
             System.out.println("Negative Index Exception");
         }
     }
+    /**
+     * set.
+     */
     public void set(){
         int[] set = new int[10];
         int siz = 0,f;
         int count;
         String st;
-        for(int i = 0;i<size;i++){
+        for (int i = 0; i < size; i++) {
             count = count(list[i]);
             if(count == 1){
                 set[siz] = list[i];
                 siz++;
             }
             if(count > 1){
-                f=0;
-                for(int j =0;j<siz;j++){
-                    if(set[j]==list[i]){
+                f = 0;
+                for(int j = 0; j < siz; j++){
+                    if(set[j] == list[i]){
                         f = 1;
                     }
                 }
-                if(f==0){
+                if(f == 0){
                     set[siz] = list[i];
                     siz++;
                 }
             }
         }
         st="{";
-        for(int i = 0;i<siz-1;i++){
-            st+=set[i]+ ", ";
+        for(int i = 0; i < siz - 1; i++){
+            st += set[i] + ", ";
         }
-        st = st+set[siz-1]+"}";
+        st = st + set[siz-1] + "}";
         System.out.println(st);
     }
+    /**
+     * count of duplicate items.
+     *
+     * @param      item  The item
+     *
+     * @return     returns the count value.
+     */
     public int count(final int item) {
         int count = 0;
         for (int j = 0; j < size; j++) {
@@ -133,6 +162,11 @@ class Set {
         }
         return count;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if (size == 0) {
             return "{}";
