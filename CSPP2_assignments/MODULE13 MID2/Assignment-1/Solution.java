@@ -144,34 +144,34 @@ class Set {
      */
     public void set() {
         final int value = 10;
-        int[] set = new int[value];
+        int[] set1 = new int[value];
         int siz = 0, f;
         int count;
         String st;
         for (int i = 0; i < size; i++) {
             count = count(list[i]);
             if (count == 1) {
-                set[siz] = list[i];
+                set1[siz] = list[i];
                 siz++;
             }
             if (count > 1) {
                 f = 0;
                 for (int j = 0; j < siz; j++) {
-                    if (set[j] == list[i]) {
+                    if (set1[j] == list[i]) {
                         f = 1;
                     }
                 }
                 if (f == 0) {
-                    set[siz] = list[i];
+                    set1[siz] = list[i];
                     siz++;
                 }
             }
         }
         st = "{";
         for (int i = 0; i < siz - 1; i++) {
-            st += set[i] + ", ";
+            st += set1[i] + ", ";
         }
-        st = st + set[siz - 1] + "}";
+        st = st + set1[siz - 1] + "}";
         System.out.println(st);
     }
     /**
@@ -300,9 +300,9 @@ public final class Solution {
                 // System.out.println(Arrays.deepToString(
                 // s.cartesianProduct(t)));
                 // break;
-                // case "set":
-                //     s.set();
-                // break;
+                case "set":
+                    s.set();
+                break;
                 default:
                 break;
             }
