@@ -35,6 +35,7 @@ class Set {
             resize();
         }
         list[size] = item;
+        set();
         size++;
     }
     /**
