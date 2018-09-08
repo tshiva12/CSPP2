@@ -22,6 +22,7 @@ class Set {
     	}
     	for (int i = 0; i < size; i++) {
     		if (item == list[i]) {
+    			remove(list[i]);
     			list[size] = item;
     		}
     	}
@@ -36,6 +37,16 @@ class Set {
     }
     public void resize() {
     	list = Arrays.copyOf(list, list.length * 2);
+    }
+    public void remove(int index) {
+    	if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
+            }
+            size--;
+        } else {
+            System.out.println("Invalid Position Exception");
+        }
     }
     public boolean contains(int item) {
     	for (int i = 0; i < size; i++) {
