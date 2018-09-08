@@ -32,8 +32,8 @@ class Set {
     /**
      * Constructs the object.
      *
-     * @param      cap   The capability
-     **/
+     * @param      capacity  The capacity
+     */
     Set(final int capacity) {
         set = new int[capacity];
         size = 0;
@@ -41,8 +41,8 @@ class Set {
     /**
      * Constructs the object.
      *
-     * @param      elements  The elements
-     **/
+     * @param      items  The items
+     */
     Set(final int[] items) {
     this.set = new int[items.length];
     for (int i = 0; i < items.length; i++) {
@@ -255,3 +255,7 @@ public final class Solution {
         }
     }
 }
+
+
+
+
