@@ -46,6 +46,7 @@ class Set {
     public void add(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             addval(newArray[i]);
+            set();
 
         }
     }
