@@ -4,12 +4,18 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : 
+ * @author     :
  */
 class Set {
     //your code goes here...
     //Good luck :-)
+    /**
+     * integer array is private.
+     */
     private int[] list;
+    /**
+     * integer size is private.
+     */
     private int size;
     /**
      * Constructs the object.
