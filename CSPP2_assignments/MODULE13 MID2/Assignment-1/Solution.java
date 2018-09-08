@@ -77,10 +77,22 @@ class Set {
     public int size() {
         return size;
     }
-
+    /**
+     * cartesianProduct.
+     *
+     * @param      newArray1  The new array 1
+     *
+     * @return     return the newArray.
+     */
     public int[] cartesianProduct(final int[] newArray1) {
         return newArray1;
     }
+    /**
+     * intersection.
+     *
+     * @param      newArray2  The new array 2
+     * @param      newArray3  The new array 3
+     */
     public void intersection(final int[] newArray2, final int[] newArray3) {
         final int value1 = 10;
         int[] subArray = new int[value1];
@@ -92,6 +104,12 @@ class Set {
             }
         }
     }
+    /**
+     * retainAll.
+     *
+     * @param      newArray3  The new array 3
+     * @param      newArray4  The new array 4
+     */
     public void retainAll(final int[] newArray3, final int[] newArray4) {
         final int value2 = 10;
         int[] subArray1 = new int[value2];
@@ -290,3 +308,6 @@ public final class Solution {
         }
     }
 }
+
+
+
