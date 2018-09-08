@@ -42,7 +42,7 @@ class Set {
      *
      * @param      newArray  The new array
      */
-    public void add(int[] newArray) {
+    public void add(final int[] newArray) {
     	for (int i = 0; i < newArray.length; i++) {
     		addval(newArray[i]);
 
@@ -61,7 +61,7 @@ class Set {
      *
      * @return     return boolean value.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
     	for (int i = 0; i < size; i++) {
     		if (list[i] == item) {
     			return true;
@@ -78,11 +78,12 @@ class Set {
     	return size;
     }
 
-    public int[] cartesianProduct(int[] newArray1) {
+    public int[] cartesianProduct(final int[] newArray1) {
     	return newArray1;
     }
-    public void intersection(int[] newArray2, int[] newArray3) {
-    	int[] subArray = new int[10];
+    public void intersection(final int[] newArray2, final int[] newArray3) {
+    	final int value1 = 10;
+    	int[] subArray = new int[value1];
     	for (int i = 0; i < newArray2.length; i++) {
     		for(int j = 0; j < newArray3.length; j++) {
     			if (newArray2[i] == newArray3[i]) {
@@ -91,10 +92,11 @@ class Set {
     		}
     	}
     }
-    public void retainAll(int[] newArray3, int[] newArray4) {
-    	int[] subArray1 = new int[10];
+    public void retainAll(final int[] newArray3, final int[] newArray4) {
+    	final int value2 = 10;
+    	int[] subArray1 = new int[value2];
     	for (int i = 0; i < newArray3.length; i++) {
-    		for(int j = 0; j < newArray4.length; j++) {
+    		for (int j = 0; j < newArray4.length; j++) {
     			if (newArray3[i] == newArray4[i]) {
     				addval(subArray1[i]);
     			}
@@ -121,35 +123,36 @@ class Set {
     /**
      * set.
      */
-    public void set(){
-        int[] set = new int[10];
-        int siz = 0,f;
+    public void set() {
+    	final int value = 10;
+        int[] set = new int[value];
+        int siz = 0, f;
         int count;
         String st;
         for (int i = 0; i < size; i++) {
             count = count(list[i]);
-            if(count == 1){
+            if (count == 1){
                 set[siz] = list[i];
                 siz++;
             }
-            if(count > 1){
+            if (count > 1) {
                 f = 0;
-                for(int j = 0; j < siz; j++){
-                    if(set[j] == list[i]){
+                for (int j = 0; j < siz; j++) {
+                    if (set[j] == list[i]){
                         f = 1;
                     }
                 }
-                if(f == 0){
+                if (f == 0) {
                     set[siz] = list[i];
                     siz++;
                 }
             }
         }
-        st="{";
-        for(int i = 0; i < siz - 1; i++){
+        st = "{";
+        for (int i = 0; i < siz - 1; i++) {
             st += set[i] + ", ";
         }
-        st = st + set[siz-1] + "}";
+        st = st + set[siz - 1] + "}";
         System.out.println(st);
     }
     /**
@@ -275,7 +278,8 @@ public final class Solution {
                 // s.add(intArray);
                 // intArray = intArray(tokens[2]);
                 // t.add(intArray);
-                // System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                // System.out.println(Arrays.deepToString(
+                // s.cartesianProduct(t)));
                 // break;
                 case "set":
                     s.set();
