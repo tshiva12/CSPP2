@@ -34,8 +34,8 @@ class Set {
      *
      * @param      cap   The capability
      **/
-    Set(final int cap) {
-        set = new int[cap];
+    Set(final int capacity) {
+        set = new int[capacity];
         size = 0;
     }
     /**
@@ -43,10 +43,10 @@ class Set {
      *
      * @param      elements  The elements
      **/
-    Set(final int[] elements) {
-    this.set = new int[elements.length];
-    for (int pos = 0; pos < elements.length; pos++) {
-        this.set[pos] = elements[pos];
+    Set(final int[] items) {
+    this.set = new int[items.length];
+    for (int i = 0; i < items.length; i++) {
+        this.set[i] = items[i];
     }
 }
     /**
@@ -125,16 +125,6 @@ class Set {
      * @param      item  The item
      */
     public void add(final int[] item) {
-        // int len = set.length + size;
-     //    int temp = 0;
-     //    for (int i = size; i < len; i++) {
-     //        if (size == set.length) {
-     //        resize();
-     //    }
-     //    set[i] = item[temp];
-     //    temp += 1;
-     //    size += 1;
-     //    }
         for (int i:item) {
             add(i);
     }
@@ -147,35 +137,7 @@ class Set {
      * @return     { description_of_the_return_value }
      **/
     public String intersection(final Set a) {
-        int members = 0;
-        int x = 0;
-        for (int i = 0; i < set.length; i++) {
-        if (a.contains(set[i])) {
-            members++;
-        }
-        }
-        // System.out.println(members);
-        int[] newMembers = new int[members];
-        int position = 0;
-        for (int i = 0; i < set.length; i++) {
-        if (a.contains(set[i])) {
-            // System.out.println(set[i]);
-            x = set[i];
-            newMembers[position++] = set[i];
-        }
-    }
-    int n = newMembers.length;
-    if (n == 0) {
-        System.out.print("{}");
-    } else {
-        System.out.print("{");
-        for (int p = 0; p < n - 1; p++) {
-            System.out.print(newMembers[p] + ", ");
-        }
-        System.out.print(newMembers[n - 1] + "}");
-    }
-    // return new Set(newMembers);
-        return "";
+        return null;
     }
     /**
      * function_description.
