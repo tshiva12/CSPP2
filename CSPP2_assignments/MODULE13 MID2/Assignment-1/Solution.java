@@ -20,7 +20,11 @@ class Set {
     	if (size >= list.length) {
     		resize();
     	}
-    	list[size] = item;
+    	for (int i = 0; i < size; i++) {
+    		if (item == list[i]) {
+    			list[size] = item;
+    		}
+    	}
     	size++;
     	// set(item);
     }
