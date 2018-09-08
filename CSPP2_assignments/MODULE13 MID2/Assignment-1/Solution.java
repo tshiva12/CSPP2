@@ -263,15 +263,16 @@ public final class Solution {
                 System.out.println(s.contains(Integer.parseInt(tokens[1])));
                 break;
                 case "print":
-                s.set();
                 System.out.println(s);
                 break;
                 case "add":
                 int[] intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
                     s.addval(intArray[0]);
+                    s.set();
                 } else {
                     s.add(intArray);
+                    s.set();
                 }
                 break;
                 // case "intersection":
