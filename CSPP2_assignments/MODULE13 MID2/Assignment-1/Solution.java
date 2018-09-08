@@ -85,7 +85,7 @@ class Set {
         final int value1 = 10;
         int[] subArray = new int[value1];
         for (int i = 0; i < newArray2.length; i++) {
-            for(int j = 0; j < newArray3.length; j++) {
+            for (int j = 0; j < newArray3.length; j++) {
                 if (newArray2[i] == newArray3[i]) {
                     addval(subArray[i]);
                 }
@@ -131,14 +131,14 @@ class Set {
         String st;
         for (int i = 0; i < size; i++) {
             count = count(list[i]);
-            if (count == 1){
+            if (count == 1) {
                 set[siz] = list[i];
                 siz++;
             }
             if (count > 1) {
                 f = 0;
                 for (int j = 0; j < siz; j++) {
-                    if (set[j] == list[i]){
+                    if (set[j] == list[i]) {
                         f = 1;
                     }
                 }
