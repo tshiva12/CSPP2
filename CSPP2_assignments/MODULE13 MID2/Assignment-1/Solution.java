@@ -104,7 +104,7 @@ class Set {
         }
         st="{";
         for(int i = 0;i<siz-1;i++){
-            st+=set[i]+ " " + ",";
+            st+=set[i]+ ", ";
         }
         st = st+set[siz-1]+"}";
         System.out.println(st);
@@ -125,7 +125,7 @@ class Set {
         String str = "{";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
-            str = str + list[i] + " " + ",";
+            str = str + list[i] + ", ";
         }
         str = str + list[i] + "}";
         return str;
