@@ -20,22 +20,22 @@ class Set {
     /**
      * Constructs the object.
      */
-    public Set() {
-    	final int num = 10;
-    	list = new int[num];
-    	size = 0;
+    Set() {
+        final int num = 10;
+        list = new int[num];
+        size = 0;
     }
     /**
      * add item into a list.
      *
      * @param      item  The item
      */
-    public void addval(int item) {
-    	if (size >= list.length) {
-    		resize();
-    	}
-    	list[size] = item;
-    	size++;
+    public void addval(final int item) {
+        if (size >= list.length) {
+            resize();
+        }
+        list[size] = item;
+        size++;
     }
     /**
      * add an array of elements.
@@ -43,16 +43,16 @@ class Set {
      * @param      newArray  The new array
      */
     public void add(final int[] newArray) {
-    	for (int i = 0; i < newArray.length; i++) {
-    		addval(newArray[i]);
+        for (int i = 0; i < newArray.length; i++) {
+            addval(newArray[i]);
 
-    	}
+        }
     }
     /**
      * resize the size value.
      */
     public void resize() {
-    	list = Arrays.copyOf(list, list.length * 2);
+        list = Arrays.copyOf(list, list.length * 2);
     }
     /**
      * contains says that item is there in list or not.
@@ -62,12 +62,12 @@ class Set {
      * @return     return boolean value.
      */
     public boolean contains(final int item) {
-    	for (int i = 0; i < size; i++) {
-    		if (list[i] == item) {
-    			return true;
-    		}
-    	}
-    	return false;
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                return true;
+            }
+        }
+        return false;
     }
     /**
      * size of list.
@@ -75,33 +75,33 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public int size() {
-    	return size;
+        return size;
     }
 
     public int[] cartesianProduct(final int[] newArray1) {
-    	return newArray1;
+        return newArray1;
     }
     public void intersection(final int[] newArray2, final int[] newArray3) {
-    	final int value1 = 10;
-    	int[] subArray = new int[value1];
-    	for (int i = 0; i < newArray2.length; i++) {
-    		for(int j = 0; j < newArray3.length; j++) {
-    			if (newArray2[i] == newArray3[i]) {
-    				addval(subArray[i]);
-    			}
-    		}
-    	}
+        final int value1 = 10;
+        int[] subArray = new int[value1];
+        for (int i = 0; i < newArray2.length; i++) {
+            for(int j = 0; j < newArray3.length; j++) {
+                if (newArray2[i] == newArray3[i]) {
+                    addval(subArray[i]);
+                }
+            }
+        }
     }
     public void retainAll(final int[] newArray3, final int[] newArray4) {
-    	final int value2 = 10;
-    	int[] subArray1 = new int[value2];
-    	for (int i = 0; i < newArray3.length; i++) {
-    		for (int j = 0; j < newArray4.length; j++) {
-    			if (newArray3[i] == newArray4[i]) {
-    				addval(subArray1[i]);
-    			}
-    		}
-    	}
+        final int value2 = 10;
+        int[] subArray1 = new int[value2];
+        for (int i = 0; i < newArray3.length; i++) {
+            for (int j = 0; j < newArray4.length; j++) {
+                if (newArray3[i] == newArray4[i]) {
+                    addval(subArray1[i]);
+                }
+            }
+        }
     }
     /**
      * add item at integer value.
@@ -124,7 +124,7 @@ class Set {
      * set.
      */
     public void set() {
-    	final int value = 10;
+        final int value = 10;
         int[] set = new int[value];
         int siz = 0, f;
         int count;
