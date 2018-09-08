@@ -45,7 +45,6 @@ class Set {
     public void add(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             addval(newArray[i]);
-            set();
 
         }
     }
@@ -264,6 +263,7 @@ public final class Solution {
                 System.out.println(s.contains(Integer.parseInt(tokens[1])));
                 break;
                 case "print":
+                s.set();
                 System.out.println(s);
                 break;
                 case "add":
