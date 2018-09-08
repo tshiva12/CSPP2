@@ -299,9 +299,9 @@ public final class Solution {
                 // System.out.println(Arrays.deepToString(
                 // s.cartesianProduct(t)));
                 // break;
-                case "set":
-                    s.set();
-                break;
+                // case "set":
+                //     s.set();
+                // break;
                 default:
                 break;
             }
