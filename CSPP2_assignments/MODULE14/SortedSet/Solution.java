@@ -70,7 +70,7 @@ class SortedSet extends Set {
      *
      * @param      end   The end
      *
-     * @return     returns a set of elements less than the exclusive element. 
+     * @return     returns a set of elements less than the exclusive element.
      */
     public int[] headSet(final int end) {
         int[] result = new int[size];
