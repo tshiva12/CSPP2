@@ -1,7 +1,15 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for sorted set.
+ */
 class SortedSet extends Set {
+    /**
+     * sort function.
+     *
+     * @param      array  The array
+     */
     public void sort(final int[] array) {
         int temp;
         for (int i = 0; i < size; i++) {
@@ -14,12 +22,25 @@ class SortedSet extends Set {
             }
         }
     }
+    /**
+     * add.
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         if (!contains(item)) {
             arr[size++] = item;
         }
         sort(arr);
     }
+    /**
+     * Subset.
+     *
+     * @param      start  The start
+     * @param      end    The end
+     *
+     * @return     return subset of a set.
+     */
     public int[] subSet(final int start, final int end) {
         if (start > end) {
             System.out.println("Invalid Arguments to Subset Exception");
@@ -27,18 +48,30 @@ class SortedSet extends Set {
         }
         int[] result = new int[size];
         int k = 0;
+        // for (int i = 0; i < size; i++) {
+        //     if (arr[i] >= start) {
+        //         for (int j = i; j < size; j++) {
+        //             if (arr[j] < end) {
+        //                 result[k++] = arr[i];
+        //             }
+        //             break;
+        //         }
+        //     }
+        // }
         for (int i = 0; i < size; i++) {
-            if (arr[i] >= start) {
-                for (int j = i; j < size; j++) {
-                    if (arr[j] < end) {
-                        result[k++] = arr[i];
-                    }
-                    break;
-                }
+            if (arr[i] >= start && arr[i] < end) {
+                result[k++] = arr[i];
             }
         }
         return Arrays.copyOf(result, k);
     }
+    /**
+     * headset function.
+     *
+     * @param      end   The end
+     *
+     * @return     returns a set of elements less than the exclusive element. 
+     */
     public int[] headSet(final int end) {
         int[] result = new int[size];
         int temp = 0;
@@ -50,6 +83,11 @@ class SortedSet extends Set {
         }
         return Arrays.copyOf(result, temp);
     }
+    /**
+     * last function.
+     *
+     * @return     returns last element in the current set.
+     */
     public int last() {
         if (size == 0) {
             System.out.println("Set Empty Exception");
@@ -57,6 +95,11 @@ class SortedSet extends Set {
         }
         return arr[size - 1];
     }
+    /**
+     * Adds all.
+     *
+     * @param      element  The element
+     */
     public void addAll(final int[] element) {
         for (int i : element) {
             this.add(i);
