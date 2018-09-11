@@ -216,21 +216,22 @@ public final class Solution {
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
             case "subSet":
-                try {
-                    if (tokens.length != 2) {
-                        break;
-                    }
-                    String[] arrstring3 = tokens[1].split(",");
-                    int[] object = s.subSet(Integer.parseInt(arrstring3[0]),
-                                            Integer.parseInt(arrstring3[1]));
-                    if (object != null) {
-                        System.out.println(Arrays.toString(object).replace("[",
-                            "{").replace("]", "}"));
-                    }
+            try {
+                if (tokens.length != 2) {
                     break;
-                } catch (InvalidSubSetException e) {
-                    System.out.println(e.getMessage());
                 }
+                String[] arrstring3 = tokens[1].split(",");
+                int[] object = s.subSet(Integer.parseInt(arrstring3[0]),
+                                        Integer.parseInt(arrstring3[1]));
+                if (object != null) {
+                    System.out.println(Arrays.toString(object).replace("[",
+                        "{").replace("]", "}"));
+                }
+                break;
+            } catch (InvalidSubSetException e) {
+                System.out.println(e.getMessage());
+            }
+                
                 // if (tokens.length != 2) {
                 //     break;
                 // }
