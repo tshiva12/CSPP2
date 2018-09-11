@@ -232,10 +232,10 @@ public final class Solution {
                     System.out.println(Arrays.toString(object).replace("[",
                         "{").replace("]", "}"));
                 }
-                break;
             } catch (InvalidSubSetException e) {
                 System.out.println(e.getMessage());
             }
+            break;
                 
                 // if (tokens.length != 2) {
                 //     break;
