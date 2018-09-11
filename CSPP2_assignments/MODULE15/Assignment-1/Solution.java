@@ -342,8 +342,8 @@ public final class Solution {
         //     System.out.println("IndexOutOfBoundsException");
         // }
         if (start <= 0 || end > size) {
-            throw new IndexOutOfBoundsException
-            ("Index Out of Bounds Exception");
+            throw new IndexOutOfBoundsException(
+                "Index Out of Bounds Exception");
             //System.out.println("Index Out of Bounds Exception");
             //return null;
         } else {
