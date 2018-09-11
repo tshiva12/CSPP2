@@ -257,39 +257,30 @@ public final class Solution {
                 // }
                 // break;
             case "headSet":
+            try {
                 if (tokens.length != 2) {
                     break;
                 }
-                int flag1 = 0;
-                final int ten1 = 10;
-                int[] obj = new int[ten1];
-                try {
-                    obj = s.headSet(Integer.parseInt(tokens[1]));
-                } catch (EmptysetException e) {
-                    System.out.println(e.getMessage());
-                    flag1 = 1;
-                }
-                if (flag1 == 0) {
+                int[] obj = s.headSet(Integer.parseInt(tokens[1]));
+                if (obj != null) {
                     System.out.println(Arrays.toString(obj).replace("[",
                         "{").replace("]", "}"));
                 }
-                break;
+            } catch (EmptysetException e) {
+                System.out.println(e.getMessage());
+            }
+            break;
             case "last":
-                int flag2 = 0;
+            try {
                 if (tokens.length != 1) {
                     break;
                 }
-                int temp = 0;
-                try {
-                    temp = s.last();
-                } catch (EmptysetException e) {
-                    System.out.println(e.getMessage());
-                    flag2 = 1;
-                }
-                if (flag2 == 0) {
-                    System.out.println(temp);
-                }
-                break;
+                int temp = s.last();
+                System.out.println(temp);
+            } catch (EmptysetException e) {
+                System.out.println(e.getMessage());
+            }
+            break;   
             case "addAll":
                 int[] intArr = intArray(tokens[1]);
                 if (intArr.length == 1) {
