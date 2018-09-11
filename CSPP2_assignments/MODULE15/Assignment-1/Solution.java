@@ -5,7 +5,12 @@ import java.util.Arrays;
  * Exception for signaling invalid position errors.
  */
 class InvalidPositionException extends Exception {
-    InvalidPositionException(String s) {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     s is a string
+     */
+    InvalidPositionException(final String s) {
         super(s);
     }
 }
