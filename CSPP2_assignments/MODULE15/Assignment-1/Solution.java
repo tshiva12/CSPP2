@@ -519,18 +519,18 @@ public final class Solution {
                     }
                 break;
                 case "removeAll":
-
-                    try {
+                try {
+                    if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
                         for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
                         }
                         l.removeAll(a);
-                    } catch(Exception e) {
-                        System.out.println(e.getMessage());
                     }
-                break;
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
                 case "subList":
                 try {
                     if (tokens.length != 2) {
