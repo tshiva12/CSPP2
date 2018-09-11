@@ -73,8 +73,13 @@ class SortedSet extends Set {
         int[] result = new int[size];
         int k = 0;
         for (int i = 0; i < size; i++) {
-            if (arr[i] >= start && arr[i] < end) {
-                result[k++] = arr[i];
+            if (arr[i] >= start) {
+                for (int j = i; j < size; j++) {
+                    if (arr[j] < end) {
+                        result[k++] = arr[i];
+                    }
+                    break;
+                }
             }
         }
         return Arrays.copyOf(result, k);
