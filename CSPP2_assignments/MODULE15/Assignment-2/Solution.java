@@ -1,16 +1,35 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Exception for signaling invalid sub set errors.
+ */
 class InvalidSubSetException extends Exception {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     s is a string
+     */
     InvalidSubSetException(final String s) {
         super(s);
     }
 }
+/**
+ * Exception for signaling emptyset errors.
+ */
 class EmptysetException extends Exception {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     s is a string.
+     */
     EmptysetException(final String s) {
         super(s);
     }
 }
+/**
+ * Class for sorted set.
+ */
 class SortedSet extends Set {
     public void sort(final int[] array) {
         int temp;
@@ -24,12 +43,27 @@ class SortedSet extends Set {
             }
         }
     }
+    /**
+     * add.
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         if (!contains(item)) {
             arr[size++] = item;
         }
         sort(arr);
     }
+    /**
+     * subset array.
+     *
+     * @param      start                   The start
+     * @param      end                     The end
+     *
+     * @return     return subset list.
+     *
+     * @throws     InvalidSubSetException  return subset exception
+     */
     public int[] subSet(final int start, final int end) throws
     InvalidSubSetException {
         if (start > end) {
@@ -45,6 +79,15 @@ class SortedSet extends Set {
         }
         return Arrays.copyOf(result, k);
     }
+    /**
+     * headset array.
+     *
+     * @param      end                The end
+     *
+     * @return     return headset list.
+     *
+     * @throws     EmptysetException  return empty set exception.
+     */
     public int[] headSet(final int end) throws EmptysetException {
         int[] result = new int[size];
         int temp = 0;
@@ -59,12 +102,24 @@ class SortedSet extends Set {
         }
         return Arrays.copyOf(result, temp);
     }
+    /**
+     * last item in a list.
+     *
+     * @return     return last item in list.
+     *
+     * @throws     EmptysetException  return empty set exception
+     */
     public int last() throws EmptysetException {
         if (size == 0) {
             throw new EmptysetException("Set Empty Exception");
         }
         return arr[size - 1];
     }
+    /**
+     * Adds all.
+     *
+     * @param      element  The element
+     */
     public void addAll(final int[] element) {
         for (int i : element) {
             this.add(i);
@@ -161,25 +216,40 @@ public final class Solution {
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
             case "subSet":
-                if (tokens.length != 2) {
-                    break;
-                }
-                int flag = 0;
-                String[] arrstring3 = tokens[1].split(",");
-                final int ten = 10;
-                int[] object = new int[ten];
                 try {
-                    object = s.subSet(Integer.parseInt(arrstring3[0]),
-                                    Integer.parseInt(arrstring3[1]));
+                    if (tokens.length != 2) {
+                        break;
+                    }
+                    String[] arrstring3 = tokens[1].split(",");
+                    int[] object = s.subSet(Integer.parseInt(arrstring3[0]),
+                                            Integer.parseInt(arrstring3[1]));
+                    if (object != null) {
+                        System.out.println(Arrays.toString(object).replace("[",
+                            "{").replace("]", "}"));
+                    }
+                    break;
                 } catch (InvalidSubSetException e) {
                     System.out.println(e.getMessage());
-                    flag = 1;
                 }
-                if (flag == 0) {
-                    System.out.println(Arrays.toString(object).replace("[",
-                        "{").replace("]", "}"));
-                }
-                break;
+                // if (tokens.length != 2) {
+                //     break;
+                // }
+                // int flag = 0;
+                // String[] arrstring3 = tokens[1].split(",");
+                // final int ten = 10;
+                // int[] object = new int[ten];
+                // try {
+                //     object = s.subSet(Integer.parseInt(arrstring3[0]),
+                //                     Integer.parseInt(arrstring3[1]));
+                // } catch (InvalidSubSetException e) {
+                //     System.out.println(e.getMessage());
+                //     flag = 1;
+                // }
+                // if (flag == 0) {
+                //     System.out.println(Arrays.toString(object).replace("[",
+                //         "{").replace("]", "}"));
+                // }
+                // break;
             case "headSet":
                 if (tokens.length != 2) {
                     break;
