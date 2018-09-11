@@ -393,11 +393,11 @@ public final class Solution {
      *
      * @return     return sublist array.
      */
-    public Solution subList(final int start, final int end) {
+    public Solution subList(final int start, final int end) throws Exception {
     // write the logic for subList
         if (start <= 0 || end > size) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
+            throw new Exception("Index Out of Bounds Exception");
+            // return null;
         } else {
             Solution list1 = new Solution();
             for (int i = start; i < end; i++) {
@@ -527,6 +527,7 @@ public final class Solution {
                     }
                 break;
                 case "subList":
+                try {
                     if (tokens.length != 2) {
                         break;
                     }
@@ -536,7 +537,9 @@ public final class Solution {
                     if (object != null) {
                         System.out.println(object);
                     }
-                    break;
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
