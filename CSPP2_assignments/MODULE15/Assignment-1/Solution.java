@@ -140,7 +140,9 @@ public class Solution {
     /**
      * remove function.
      *
-     * @param      index  The index
+     * @param      index                     The index
+     *
+     * @throws     InvalidPositionException  Invalid Position Exception
      */
     public void remove (final int index) throws InvalidPositionException {
         // write the logic for remove here. Think about what to do to the size
@@ -263,7 +265,10 @@ public class Solution {
     */
      /**
       * Removes all.
-      * @param      newArray  The new array
+      *
+      * @param      newArray                  The new array
+      *
+      * @throws     InvalidPositionException  Invalid Position Exception
       */
      public void removeAll(final int[] newArray) throws InvalidPositionException {
         // write the logic
@@ -293,11 +298,16 @@ public class Solution {
     */
     /**
      * sublist.
-     * @param      start  The start
-     * @param      end    The end
-     * @return     returns newlist.
+     *
+     * @param      start                     The start
+     * @param      end                       The end
+     *
+     * @return     returns newlist
+     *
+     * @throws     InvalidPositionException  Invalid position Exception
      */
-    public Solution subList(final int start, final int end) throws InvalidPositionException {
+    public Solution subList(final int start, final int end)
+     throws InvalidPositionException {
     // write the logic for subList
         Solution newlist = new Solution();
         // try {
@@ -468,7 +478,6 @@ public class Solution {
                 } catch (InvalidPositionException e) {
                     System.out.println(e.getMessage());
                 }
-                    
                     break;
                 case "equals":
                     if (tokens.length == 2) {
