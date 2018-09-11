@@ -334,17 +334,17 @@ public final class Solution {
      * @param      index  The index is integer.
      * @param      item   The item is integer.
      */
-    public void add(final int index, final int item) {
-        if (index >= 0) {
-            for (int i = size; i > index; i--) {
-            list[i] = list[i - 1];
-        }
-        list[index] = item;
-        size++;
-        } else {
-            System.out.println("Negative Index Exception");
-        }
-    }
+    // public void add(final int index, final int item) {
+    //     if (index >= 0) {
+    //         for (int i = size; i > index; i--) {
+    //         list[i] = list[i - 1];
+    //     }
+    //     list[index] = item;
+    //     size++;
+    //     } else {
+    //         System.out.println("Negative Index Exception");
+    //     }
+    // }
     /* Returns the count of occurances of a given item in the list*/
     /**
      * count the duplicate values in the list.
