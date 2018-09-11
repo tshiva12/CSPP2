@@ -284,7 +284,12 @@ public final class Solution {
      * @return     return the item.
      */
     public boolean contains(final int item) {
-        return indexOf(item) == -1;
+        for (int i = 0; i < size - 1; i++) {
+            if (list[i] == item) {
+                return true;
+            }
+        }
+        return false;
     }
     /*
      * Returns the index of the first occurrence
@@ -395,16 +400,20 @@ public final class Solution {
      */
     public Solution subList(final int start, final int end) throws Exception {
     // write the logic for subList
-        if (start <= 0 || end > size) {
+        if (start <= 0 || end < 0 || start > end
+            || start > size || end > size) {
             throw new Exception("Index Out of Bounds Exception");
             // return null;
-        } else {
-            Solution list1 = new Solution();
-            for (int i = start; i < end; i++) {
-                list1.add(list[i]);
-            }
-            return list1;
         }
+        if (start == end && start > size) {
+            throw new Exception("Index Out of Bounds Exception");
+            // return null;
+        }
+        Solution list1 = new Solution();
+        for (int i = start; i < end; i++) {
+            list1.add(list[i]);
+        }
+        return list1;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
