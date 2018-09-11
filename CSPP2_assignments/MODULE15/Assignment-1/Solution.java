@@ -65,7 +65,7 @@ public final class Solution {
     /**
      * Constructs the object List.
      */
-    public Solution() {
+    Solution() {
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
@@ -78,27 +78,6 @@ public final class Solution {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-    }
-    /*
-     * Overloaded constructor with list capacity as argument
-     * The default constructor sets the list capacity to 10
-     * So, adding an item when the list size is 10
-     * raises a Index Out of Bounds Exception
-     * There will be some clients of the ADT that will require
-     * the list to contain n elements which is known
-     * at the time of creating the list.
-     * The overloaded constructor is a way to initialize a list with
-     * a list capacity of n items where n is given as an argument to
-     * constructor.
-     */
-    /**
-     * Constructs the object List.
-     *
-     * @param      capacity  The capacity is integer.
-     */
-    public Solution(final int capacity) {
-        size = 0;
-        list = new int[capacity];
     }
     /*
      * The add method does what the name suggests.
@@ -229,7 +208,7 @@ public final class Solution {
      * @return     return index value.
      */
     public int get(final int index) {
-        if (index < 0 || index >= size) {
+        if (index < 0 && index >= size) {
             return -1;
         } else {
             return list[index];
@@ -305,7 +284,7 @@ public final class Solution {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i]) {
+            if (list[i] == item) {
                 return i;
             }
         }
@@ -371,17 +350,19 @@ public final class Solution {
      * @param      items  The items are array Integers.
      */
     public void removeAll(final int[] items) throws Exception {
-        for (int i = 0; i < items.length; i++) {
-            for (int j = 0; j < size; j++) {
-                if (items[i] == list[j]) {
-                    remove(j);
-                    j--;
-                }
-                else {
-                    throw new Exception("Invalid Position Exception");
-                }       
+        if (items.length < list.length) {
+            for (int i = 0; i < items.length; i++) {
+                for (int j = 0; j < size; j++) {
+                    if (items[i] == list[j]) {
+                        remove(j);
+                        j--;
+                    }
+                }            
             }
+        } else {
+            throw new Exception("Invalid Position Exception");
         }
+        
     }
     /*
     Returns a list object containing elements, including startIndex and
