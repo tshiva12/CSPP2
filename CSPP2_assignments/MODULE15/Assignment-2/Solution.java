@@ -31,6 +31,11 @@ class EmptysetException extends Exception {
  * Class for sorted set.
  */
 class SortedSet extends Set {
+    /**
+     * sort.
+     *
+     * @param      array  The array
+     */
     public void sort(final int[] array) {
         int temp;
         for (int i = 0; i < size; i++) {
@@ -236,7 +241,6 @@ public final class Solution {
                 System.out.println(e.getMessage());
             }
             break;
-                
                 // if (tokens.length != 2) {
                 //     break;
                 // }
@@ -280,7 +284,7 @@ public final class Solution {
             } catch (EmptysetException e) {
                 System.out.println(e.getMessage());
             }
-            break;   
+            break;
             case "addAll":
                 int[] intArr = intArray(tokens[1]);
                 if (intArr.length == 1) {
