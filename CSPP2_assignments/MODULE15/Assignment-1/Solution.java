@@ -428,11 +428,26 @@ public final class Solution {
      */
     public boolean equals(final Solution newlist) {
     // Replace the code below
-        if (Arrays.equals(newlist.list, list)) {
-            return true;
-        }
+        int size1 = newlist.size;
+        int f = 0;
+        if (size != size1) {
+            return false;
+        } else {
+            for (int i = 0; i < size; i++) {
+                if (list[i] != newlist.get(i)) {
+                    f = 1;
+                }
+            }
+            if (f == 0) {
+                return true;
+            }
         return false;
+        }
     }
+    //     if (Arrays.equals(newlist.list, list)) {
+    //         return true;
+    //     }
+    //     return false;
     /*
     * Removes all the elements from list
     * Think about this case and make the method
