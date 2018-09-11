@@ -15,6 +15,19 @@ class InvalidPositionException extends Exception {
     }
 }
 /**
+ * Exception for signaling index out of bounds errors.
+ */
+class IndexOutOfBoundsException extends Exception {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     s is a string
+     */
+    IndexOutOfBoundsException(final String s) {
+        super(s);
+    }
+}
+/**
  * Class for solution.
  */
 public final class Solution {
@@ -316,7 +329,7 @@ public final class Solution {
      * @throws     InvalidPositionException  Invalid position Exception
      */
     public Solution subList(final int start, final int end)
-     throws InvalidPositionException {
+     throws IndexOutOfBoundsException {
     // write the logic for subList
         Solution newlist = new Solution();
         // try {
@@ -329,7 +342,7 @@ public final class Solution {
         //     System.out.println("IndexOutOfBoundsException");
         // }
         if (start <= 0 || end > size) {
-            throw new InvalidPositionException("Index Out of Bounds Exception");
+            throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
             //System.out.println("Index Out of Bounds Exception");
             //return null;
         } else {
@@ -484,7 +497,7 @@ public final class Solution {
                     if (object != null) {
                         System.out.println(object);
                     }
-                } catch (InvalidPositionException e) {
+                } catch (IndexOutOfBoundsException e) {
                     System.out.println(e.getMessage());
                 }
                     break;
