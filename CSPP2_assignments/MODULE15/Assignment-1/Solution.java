@@ -2,14 +2,17 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 /**
- * List of .
+ * Exception for signaling invalid position errors.
  */
 class InvalidPositionException extends Exception {
     InvalidPositionException(String s) {
         super(s);
     }
 }
-public class Solution {
+/**
+ * Class for solution.
+ */
+public final class Solution {
     //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
@@ -144,7 +147,7 @@ public class Solution {
      *
      * @throws     InvalidPositionException  Invalid Position Exception
      */
-    public void remove (final int index) throws InvalidPositionException {
+    public void remove(final int index) throws InvalidPositionException {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
@@ -270,7 +273,8 @@ public class Solution {
       *
       * @throws     InvalidPositionException  Invalid Position Exception
       */
-     public void removeAll(final int[] newArray) throws InvalidPositionException {
+     public void removeAll(final int[] newArray)
+      throws InvalidPositionException {
         // write the logic
         // for (int i = 0; i < newArray.length; i++) {
         //  if(newArray[i] == list[i]) {
@@ -281,7 +285,7 @@ public class Solution {
                 for (int j = 0; j < size; j++) {
                     if (newArray[i] == list[j]) {
                         remove(j);
-                        j--;    
+                        j--;
                     }
                 }
             }
