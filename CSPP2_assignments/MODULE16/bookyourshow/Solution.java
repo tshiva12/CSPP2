@@ -6,7 +6,7 @@ class Show {
 	public String moviename;
 	public String date;
 	public String[] seatnumbers;
-	public Show(String moviename, String date, String[] seatnumbers) {
+	public Show(final String moviename, final String date, final String[] seatnumbers) {
 		this.moviename = moviename;
 		this.date = date;
 		this.seatnumbers = seatnumbers;
@@ -40,16 +40,18 @@ class BookYourShow {
 	public void addAShow(Show show) {
 		allshows[allshowscount++] = show;
 	}
-	public Show getAShow(String moviename, String date) {
+	public Show getAShow(final String moviename, final String date) {
 		for (int i = 0; i < allshowscount; i++) {
-			if (allshows[i].moviename.equals(moviename) && allshows[i].date.equals(date)) {
+			if (allshows[i].moviename.equals(moviename) &&
+			 allshows[i].date.equals(date)) {
 				return allshows[i];
 			}
 			
 		}
 		return null;
 	}
-	public void bookAShow(String moviename, String date, Patron pat, String[] seatnumbers) {
+	public void bookAShow(final String moviename, final String date,
+	 final Patron pat, final String[] seatnumbers) {
 		Show checkshow = getAShow(moviename, date);
 		int flag = 0;
 		if(allshowscount == 0) {
@@ -65,7 +67,8 @@ class BookYourShow {
 					}
 				}
 				for (int z = 0;z < allshowscount; z++) {
-					if(allshows[z].moviename.equals(checkshow.moviename) && allshows[z].date.equals(checkshow.date)) {
+					if(allshows[z].moviename.equals(checkshow.moviename) &&
+					 allshows[z].date.equals(checkshow.date)) {
 						allshows[z] = checkshow;
 					}
 				}
@@ -77,18 +80,21 @@ class BookYourShow {
 			}
 		}
 	}
-	public void printTicket(String moviename, String date ,String phonenumber) {
+	public void printTicket(final String moviename, final String date ,
+	 final String phonenumber) {
 		Show checkshow = getAShow(moviename, date);
 		if (checkshow != null) {
 			int flag = 0;
 			for (int i = 0; i < allpatronscount; i++) {
-				if (allpatrons[i].phonenumber.equals(phonenumber)) {
+				if (allpatrons[i].phonenumber.equals(
+					phonenumber)) {
 					flag = 1;
 					break;
 				}
 			}
-			if(flag == 1) {
-				System.out.println(phonenumber + " " + moviename + " " + date);
+			if (flag == 1) {
+				System.out.println(phonenumber + " " +
+				 moviename + " " + date);
 			} else {
 				System.out.println("Invalid");
 			}
@@ -97,12 +103,17 @@ class BookYourShow {
 		}
 
 	}
+	/**
+	 * Shows all.
+	 */
 	public void showAll() {
 		for (int i = 0; i < allshowscount; i++) {
-			String str1 = allshows[i].moviename + "," + allshows[i].date + ",";
+			String str1 = allshows[i].moviename + "," +
+			 allshows[i].date + ",";
 			// System.out.println(allshows[i]);
 			String remainingseats = "[";
-			for (int j = 0; j < allshows[i].seatnumbers.length; j++) {
+			for (int j = 0; j < allshows[i].seatnumbers.length;
+			 j++) {
 				remainingseats += allshows[i].seatnumbers[j];
 				if (j < allshows[i].seatnumbers.length - 1) {
 					remainingseats += ",";
