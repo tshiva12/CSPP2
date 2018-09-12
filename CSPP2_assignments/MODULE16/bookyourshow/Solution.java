@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 /**
  * Class for show.
- * @author     shivaprasad
+ * @author     shivap
  */
 class BookYourShow {
     /**
