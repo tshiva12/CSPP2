@@ -1,15 +1,20 @@
 import java.util.Scanner;
+/**
+ * Class for show.
+ */
 class Show {
 	public String moviename;
 	public String date;
 	public String[] seatnumbers;
-	// public Show() {}
 	public Show(String moviename, String date, String[] seatnumbers) {
 		this.moviename = moviename;
 		this.date = date;
 		this.seatnumbers = seatnumbers;
 	}
 }
+/**
+ * Class for patron.
+ */
 class Patron {
 	public String name;
 	public String phonenumber;
@@ -18,6 +23,9 @@ class Patron {
 		this.phonenumber = phonenumber;
 	}
 }
+/**
+ * Class for book your show.
+ */
 class BookYourShow {
 	public Show[] allshows;
 	public int allshowscount;
