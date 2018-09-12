@@ -149,9 +149,21 @@ class BookYourShow {
         }
     }
 }
+/**
+ * Class for show.
+ */
 class Show {
+    /**
+     * var for moviename.
+     */
     private String movieName;
+    /**
+     * var for movietime.
+     */
     private String movieTime;
+    /**
+     * var for seats.
+     */
     private String[] seats;
     /**
      * Constructs the object for show class.
@@ -190,7 +202,7 @@ class Show {
         return this.seats;
     }
     /**
-     * { function_description }
+     * function for except tickets.
      *
      * @return     { description_of_the_return_value }
      */
@@ -217,15 +229,15 @@ class Show {
  */
 class Patron {
     /**
-     * { var_description }
+     * var custmoername.
      */
     private String customerName;
     /**
-     * { var_description }
+     * var phonenum.
      */
     private String phoneNumber;
     /**
-     * { var_description }
+     * var booking seats.
      */
     private String[] bookedSeats;
     /**
