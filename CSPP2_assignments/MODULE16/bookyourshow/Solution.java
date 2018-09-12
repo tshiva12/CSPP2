@@ -165,20 +165,45 @@ class Show {
         this.movieTime = mtime;
         this.seats = nseats;
     }
+    /**
+     * Gets the movie name.
+     *
+     * @return     The movie name.
+     */
     public String getMovieName() {
         return this.movieName;
     }
+    /**
+     * Gets the date.
+     *
+     * @return     The date.
+     */
     public String getDate() {
         return this.movieTime;
     }
+    /**
+     * Gets the seats.
+     *
+     * @return     The seats.
+     */
     public String[] getSeats() {
         return this.seats;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String ExceptTickets() {
         String s = "";
         s += movieName + "," + movieTime;
         return s;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String s = "";
         s += movieName + "," + movieTime + ",";
@@ -191,8 +216,17 @@ class Show {
  * Class for patron.
  */
 class Patron {
+    /**
+     * { var_description }
+     */
     private String customerName;
+    /**
+     * { var_description }
+     */
     private String phoneNumber;
+    /**
+     * { var_description }
+     */
     private String[] bookedSeats;
     /**
      * Constructs the object for Patron class.
@@ -207,15 +241,35 @@ class Patron {
         this.phoneNumber = phonenum;
         this.bookedSeats = bseats;
     }
+    /**
+     * Gets the cname.
+     *
+     * @return     The cname.
+     */
     public String getCname() {
         return this.customerName;
     }
+    /**
+     * Gets the number.
+     *
+     * @return     The number.
+     */
     public String getNum() {
         return this.phoneNumber;
     }
+    /**
+     * Gets the booked seats.
+     *
+     * @return     The booked seats.
+     */
     public String[] getBookedSeats() {
         return this.bookedSeats;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String s = "";
         return s;
