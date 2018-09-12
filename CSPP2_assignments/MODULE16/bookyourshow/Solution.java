@@ -3,10 +3,27 @@ import java.util.Scanner;
  * Class for show.
  */
 class Show {
+	/**
+	 * { var_description }
+	 */
 	public String moviename;
+	/**
+	 * { var_description }
+	 */
 	public String date;
+	/**
+	 * { var_description }
+	 */
 	public String[] seatnumbers;
-	public Show(final String moviename, final String date, final String[] seatnumbers) {
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      moviename    The moviename
+	 * @param      date         The date
+	 * @param      seatnumbers  The seatnumbers
+	 */
+	public Show(final String moviename, final String date,
+	 final String[] seatnumbers) {
 		this.moviename = moviename;
 		this.date = date;
 		this.seatnumbers = seatnumbers;
