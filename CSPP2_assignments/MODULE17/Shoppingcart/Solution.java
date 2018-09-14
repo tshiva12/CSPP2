@@ -44,7 +44,16 @@ class ShoppingCart {
 		catalog[catalogcount++] = item;
 	}
 	public void addToCart(Item item) {
-		cart[cartcount++] = item;
+		int temp = 0;
+		for (int i = 0; i < cartcount; i++) {
+			if (cart[i].getName().equals(item.getName())) {
+				cart[i].setQuantity(cart[i].getQuantity() + item.getQuantity());
+				temp = 1;
+			}
+		}
+		if (temp != 1) {
+			cart[cartcount++] = item;
+		}
 	}
 	public void removeFromCart(Item item) {
 		int position = 0, temp = 0;
