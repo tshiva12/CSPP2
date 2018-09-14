@@ -34,8 +34,8 @@ public class Solution {
                  Integer.parseInt(data[1])));
                 break;
                 case "payableAmount":
-                System.out.println("Payable amount: " +
-                 shopcart.getPayableAmount());
+                System.out.println("Payable amount: "
+                 + shopcart.getPayableAmount());
                 break;
                 case "print":
                 shopcart.printInvoice();
