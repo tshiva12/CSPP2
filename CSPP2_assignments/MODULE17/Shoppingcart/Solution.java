@@ -2,13 +2,18 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
     private Solution() {
         //construtor is not used.
     }
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         ShoppingCart shopcart = new ShoppingCart();
