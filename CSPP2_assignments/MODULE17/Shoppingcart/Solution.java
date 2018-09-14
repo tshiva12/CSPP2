@@ -1,12 +1,21 @@
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 public class Solution {
-    public static void main(String[] args) {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //construtor is not used.
+    }
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         ShoppingCart shopcart = new ShoppingCart();
         while (sc.hasNext()) {
             String input = sc.nextLine();
             String[] tokens = input.split(" ");
-            switch(tokens[0]) {
+            switch (tokens[0]) {
                 case "Item":
                 String[] data = tokens[1].split(",");
                 shopcart.addToCatalog(new Item(data[0],
@@ -25,8 +34,8 @@ public class Solution {
                 shopcart.showCart();
                 break;
                 case "totalAmount":
-                System.out.println("totalAmount: " +
-                 shopcart.getTotalAmount());
+                System.out.println("totalAmount: "
+                 + shopcart.getTotalAmount());
                 break;
                 case "remove":
                 data = tokens[1].split(",");
@@ -43,7 +52,11 @@ public class Solution {
                 case "coupon":
                 shopcart.applyCoupon(tokens[1]);
                 break;
+                default:
+                break;
             }
         }
     }
 }
+
+
