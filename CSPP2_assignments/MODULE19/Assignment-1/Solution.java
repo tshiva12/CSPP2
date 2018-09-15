@@ -58,30 +58,31 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s, final Quiz quiz,
+     final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         if (questionCount == 0) {
-        	System.out.println("Quiz does not have questions");
+            System.out.println("Quiz does not have questions");
         }
         if (questionCount > 0) {
-        	System.out.println(questionCount + " are added to the quiz");
+            System.out.println(questionCount + " are added to the quiz");
         }
         // if () {
-        // 	System.out.println("Error! Malformed question");
+        //  System.out.println("Error! Malformed question");
         // }
         // if () {
-        // 	System.out.println("Error! Correct answer choice number is out of range for question text 1");
+        //  System.out.println("Error! Correct answer choice number is out of range for question text 1");
         // }
         // if () {
-        // 	System.out.println("Invalid max marks for question about sony");
+        //  System.out.println("Invalid max marks for question about sony");
         // }
         // if () {
-        // 	System.out.println("Invalid penalty for question about sony");
+        //  System.out.println("Invalid penalty for question about sony");
         // }
         // if () {
-        // 	System.out.println("trick question  does not have enough answer choices");
+        //  System.out.println("trick question  does not have enough answer choices");
         // }
 
     }
@@ -93,17 +94,15 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner s, final Quiz quiz,
+     final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        
-
-        
     }
 
     /**
-     * Displays the score report
+     * Displays the score report.
      *
      * @param      quiz     The quiz object
      */
@@ -111,5 +110,9 @@ public final class Solution {
         // write your code here to display the score report
     }
 }
+
+
+
+
 
 
