@@ -67,14 +67,14 @@ public final class Solution {
             System.out.println("Quiz does not have questions");
         }
         if (questionCount > 0) {
-            System.out.println(questionCount + " are added to the quiz");
+            System.out.println("Error! Malformed question");
         }
         // if () {
         //  System.out.println("Error! Malformed question");
         // }
         // if () {
-        //  System.out.println("Error! Correct answer choice number is
-        //   out of range for question text 1");
+        //  System.out.println("Error! Correct answer choice number
+        //   is out of range for question text 1");
         // }
         // if () {
         //  System.out.println("Invalid max marks for question about sony");
@@ -101,6 +101,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        
     }
 
     /**
@@ -110,6 +111,7 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
+        System.out.println("Correct Answer! - Marks Awarded: ");
     }
 }
 
