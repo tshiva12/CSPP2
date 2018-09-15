@@ -69,6 +69,9 @@ public final class Solution {
         if (questionCount > 0) {
             System.out.println("Error! Malformed question");
         }
+        // if (questionCount > 0) {
+        //     System.out.println(questionCount + " are added to the quiz");
+        // }
         // if () {
         //  System.out.println("Error! Malformed question");
         // }
