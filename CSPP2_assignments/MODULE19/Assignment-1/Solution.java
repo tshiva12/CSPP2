@@ -101,7 +101,6 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        
     }
 
     /**
@@ -111,7 +110,7 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-        System.out.println("Correct Answer! - Marks Awarded: ");
+        // System.out.println("Correct Answer! - Marks Awarded: ");
     }
 }
 
