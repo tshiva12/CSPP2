@@ -66,7 +66,7 @@ public final class Solution {
         if (questionCount == 0) {
             System.out.println("Quiz does not have questions");
         }
-        if (questionCount < 0) {
+        if (questionCount > 0) {
             System.out.println("Error! Malformed question");
         }
         // if () {
