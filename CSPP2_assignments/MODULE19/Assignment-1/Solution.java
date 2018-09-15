@@ -64,9 +64,12 @@ public final class Solution {
         // add the question objects to the quiz class
         if (questionCount == 0) {
         	System.out.println("Quiz does not have questions");
-        } else {
+        }
+        if (questionCount <= 4) {
         	System.out.println(questionCount + " are added to the quiz");
         }
+        
+
     }
 
     /**
@@ -80,9 +83,9 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        if (answerCount > 4) {
-        	System.out.println("Error! Correct answer choice number is out of range for question text 1");
-        }
+        // if (answerCount > 4) {
+        // 	System.out.println("Error! Correct answer choice number is out of range for question text 1");
+        // }
         //if(questiontext[i].choice.equals(Quiz.choice))
         
     }
