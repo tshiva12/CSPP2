@@ -67,8 +67,24 @@ public final class Solution {
         }
         if (questionCount > 0) {
         	System.out.println(questionCount + " are added to the quiz");
+        } else {
+        	System.out.println("Error! Malformed question");
         }
-
+        // if () {
+        // 	System.out.println("Error! Malformed question");
+        // }
+        // if (correctans > 4) {
+        // 	System.out.println("Error! Correct answer choice number is out of range for question text 1");
+        // }
+        // if (Quiz.marksawared < 0) {
+        // 	System.out.println("Invalid max marks for question about sony");
+        // }
+        // if () {
+        // 	System.out.println("Invalid penalty for question about sony");
+        // }
+        // if () {
+        // 	System.out.println("trick question  does not have enough answer choices");
+        // }
 
     }
 
@@ -99,4 +115,18 @@ public final class Solution {
         // write your code here to display the score report
     }
 }
-
+class Quiz {
+	public String questiontext;
+	public String choice;
+	public int correctanswer;
+	public int marksawarded;
+	public int penality;
+	public Quiz() {}
+	public Quiz(String questiontext, String choice, int correctanswer, int marksawarded, int penality) {
+		this.questiontext = questiontext;
+		this.choice = choice;
+		this.correctanswer = correctanswer;
+		this.marksawarded = marksawarded;
+		this.penality = penality;
+	}
+}
