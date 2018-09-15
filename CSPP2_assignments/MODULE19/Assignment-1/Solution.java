@@ -73,7 +73,8 @@ public final class Solution {
         //  System.out.println("Error! Malformed question");
         // }
         // if () {
-        //  System.out.println("Error! Correct answer choice number is out of range for question text 1");
+        //  System.out.println("Error! Correct answer choice number is
+        //   out of range for question text 1");
         // }
         // if () {
         //  System.out.println("Invalid max marks for question about sony");
@@ -82,7 +83,8 @@ public final class Solution {
         //  System.out.println("Invalid penalty for question about sony");
         // }
         // if () {
-        //  System.out.println("trick question  does not have enough answer choices");
+        //  System.out.println("trick question 
+        //  does not have enough answer choices");
         // }
 
     }
