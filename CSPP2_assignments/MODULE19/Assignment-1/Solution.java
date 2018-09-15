@@ -83,8 +83,8 @@ public final class Solution {
         //  System.out.println("Invalid penalty for question about sony");
         // }
         // if () {
-        //  System.out.println("trick question 
-        //  does not have enough answer choices");
+        //  System.out.println("trick question
+        //   does not have enough answer choices");
         // }
 
     }
