@@ -279,26 +279,30 @@ public final class Solution {
                 String[] choices = ip[1].split(",");
                 if (ip.length != five  || ip[0].length() == 0) {
                     System.out.println("Error! Malformed question");
+                    return;
                 } else if (choices.length < two) {
                     System.out.println(ip[0]
                         + " does not have enough answer choices");
+                    return;
                 } else if (Integer.parseInt(ip[two]) > choices.length) {
                     System.out.println(
                         "Error! Correct answer choice number is out of range for "
                         + ip[0]);
+                    return;
                 } else if (!(Integer.parseInt(ip[three]) > 0)) {
                     System.out.println("Invalid max marks for " + ip[0]);
+                    return;
                 } else if(!(Integer.parseInt(ip[four]) <= 0)) {
                     System.out.println("Invalid penalty for " + ip[0]);
+                    return;
                 } else {
                     Question question1 = new Question(ip[0], choices,
                     Integer.parseInt(ip[two]), Integer.parseInt(ip[three]),
                     Integer.parseInt(ip[four]));
                     quiz.addQuestion(question1);
-                    System.out.println(q + " are added to the quiz");
-
                 }
             }
+            System.out.println(q + " are added to the quiz");
         }
     }
     /**
