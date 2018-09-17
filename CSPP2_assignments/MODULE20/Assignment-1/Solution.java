@@ -295,9 +295,10 @@ public final class Solution {
                     Integer.parseInt(ip[two]), Integer.parseInt(ip[three]),
                     Integer.parseInt(ip[four]));
                     quiz.addQuestion(question1);
+                    System.out.println(q + " are added to the quiz");
+
                 }
             }
-            System.out.println(q + " are added to the quiz");
         }
     }
     /**
