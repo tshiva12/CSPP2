@@ -286,7 +286,7 @@ public final class Solution {
                     return;
                 } else if (Integer.parseInt(ip[two]) > choices.length) {
                     System.out.println(
-                        "Error! Correct answer choice number is out of range for "
+                    "Error! Correct answer choice number is out of range for "
                         + ip[0]);
                     return;
                 } else if (!(Integer.parseInt(ip[three]) > 0)) {
