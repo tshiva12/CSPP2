@@ -48,7 +48,7 @@ class Question {
         this.choices = choices1;
         this.correctAnswer = correctAnswer1;
         this.maxMarks = maxMarks1;
-        this.penalty = penalty1; 
+        this.penalty = penalty1;
 
     }
     /**
@@ -127,7 +127,7 @@ class Question {
      */
     public String toString() {
         String s = "";
-        for (int i = 0; i < choices.length - 1; i++ ) {
+        for (int i = 0; i < choices.length - 1; i++) {
             s += choices[i] + "\t";
         }
         s += choices[choices.length - 1];
@@ -292,7 +292,7 @@ public final class Solution {
                 } else if (!(Integer.parseInt(ip[three]) > 0)) {
                     System.out.println("Invalid max marks for " + ip[0]);
                     return;
-                } else if(!(Integer.parseInt(ip[four]) <= 0)) {
+                } else if (!(Integer.parseInt(ip[four]) <= 0)) {
                     System.out.println("Invalid penalty for " + ip[0]);
                     return;
                 } else {
@@ -320,12 +320,13 @@ public final class Solution {
         try {
             String answer1;
             for (int i = 0; i < q; i++) {
-                Question question_no = quiz.getQuestion(i);
-                System.out.println(question_no.getQuestionText() + "(" + question_no.getMaxMarks() + ")");
-                System.out.println(question_no.toString());
+                Question questionno = quiz.getQuestion(i);
+                System.out.println(questionno.getQuestionText()
+                 + "(" + questionno.getMaxMarks() + ")");
+                System.out.println(questionno.toString());
                 System.out.println("");
                 answer1 = scan.nextLine();
-                question_no.setResponse(answer1);
+                questionno.setResponse(answer1);
             }
         } catch (Exception e) {
             return;
@@ -341,3 +342,5 @@ public final class Solution {
         System.out.println(quiz.showReport());
     }
 }
+
+
