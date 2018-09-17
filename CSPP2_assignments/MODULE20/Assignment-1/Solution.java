@@ -297,8 +297,8 @@ public final class Solution {
                     quiz.addQuestion(question1);
                 }
             }
-            System.out.println(q + " are added to the quiz");
         }
+        System.out.println(q + " are added to the quiz");
     }
     /**
      * Starts a quiz.
