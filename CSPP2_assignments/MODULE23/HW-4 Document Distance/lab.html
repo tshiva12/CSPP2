@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>15-121: Document Distance</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center><h2>Homework Assignment 4<p>
+      <font color="green">The document distance problem</font>
+      </h2><p></center>
+
+<hr>
+<p>Document similarities are measured based on the content overlap between  documents. With the large number of text documents in our life, there is a need toautomatically process those documents for information extraction, similarity clustering, and search applications. There exist a vast number of complex algorithms to solve this problem. One of such algorithms is a <a href="http://en.wikipedia.org/wiki/Cosine_similarity">cosine similarity</a> - a vector based similarity measure. The cosine distance of two documents is defined by the angle between their feature vectors which are, in our case, word frequency vectors. The word frequency distribution of a document is a mapping from words to their frequency count.
+
+
+<p><center><img src="pix1.bmp"></center>
+<p>where  <b>"."</b> denotes the dot-product of the two frequency vectors A and B, and <b
+>||A||</b> denotes the length (or norm) of a vector.
+
+
+<hr><h3>Objectives</h3>
+<ul>
+<li>Gain experience in working with List, Set and Map interfaces.
+<li>Gain experience working with more realistic problems that are open-ended, with black- box specifications and requirements.
+</ul>
+
+
+
+<hr><h3>Problem Statement</h3>
+
+<p>In this lab you are to compute a distance (an angle) between two given documents or between two strings using the cosine similarity metric. You start with reading in the text and counting frequency of each word. The word frequency distribution for the text <b>D</b> is Java's Map from words to their frequency counts, which we'll denote as <b>freq(D) </b>. We view <b>freq(D)</b> as a vector of non-negative integers in N-dimensional space. For example, reading the string "To be or not to be" results in the following map
+
+<dir><pre>
+{be=2, not=1, or=1, to=2}
+</pre></dir>
+
+<p>These 4 distinct words make a document representation as a 4-dimensional vector <b><code>{2, 1, 1, 2}</code></b> in term space.
+
+
+<p>A word is a sequence of letters [a..zA..Z] that might include digits [0..9] and the undescore character. All delimiters are thrown away and not kept as part of the word. Here are examples of words:
+<dir><pre>
+abcd
+abcd12
+abc_
+a12cd
+15111
+</pre></dir>
+<p>We'll treat all upper-case letters as if they are lower-case, so that "CMU" and "cmu" are the same word.
+
+<p>
+
+<p>The <a href=
+"http://en.wikipedia.org/wiki/Norm_(mathematics)">Euclidean norm</a> of the frequency vector is defined by
+
+<p><center><img src="pix2.bmp"></center>
+
+<p>where <b>x<sub>k</sub></b> denote frequencies for each word in the text. For the above example, the norm is
+
+<p><center><img src="pix3.bmp"></center>
+
+
+<p>The <a href="http://en.wikipedia.org/wiki/Dot_product">Dot product</a> (or the inner product) of two frequency vectors X and Y is defined by
+
+<p><center><img src="pix4.bmp"></center>
+<p>Here we multiply frequencies <b>x<sub>k</sub></b> and <b>y<sub>k</sub></b> of the <u>same </u> word in both text documents.
+
+<p>Finally, we define a distance between two documents D<sub>1</sub> and D<sub>2</sub> by using cosine similarity measurement:
+
+<p><center><img src="pix5.bmp"></center>
+
+<p>Observe, the distance between two identical documents is 0, and the distance is <code>Pi/2 = 1.57...</code> if two documents have no common words.
+
+<p>Your task is to write a program to compute a distance (an angle) between two given documents using the formula above.
+
+<hr>
+<h3>Black-box Requirements</h3>
+<p>Black-box requirements are requirements that your program must conform to. They are described by so-called acceptance tests - tests that define the criteria by which your clients will determine whether the program meets their needs.
+
+<p>We provide you with five acceptance tests that include expected outputs. Those test files enumerated by <code>Test1.java, ..., Test5.java</code>. The last test case is perhaps the most challenging. Your application must conform to all these tests. You are encouraged to create your own test cases to test various edge cases such as empty string or file, two identical files.
+
+
+
+<hr>
+<h3>Hints</h3>
+<ul>
+<li>How to read words from a file? There are a few different ways to identify words, however the simplest one is to use the split() method along with a regular expression processor, namely <code>split("\\W")</code>.
+<li>Only consider words of length greater than 0! Therefore, check that 
+each string has non-zero length before declaring that it is a word.
+<li>How to store words and their multiplicities? Before you insert a word into a map, you have to query the map. The get() method returns either null or the current frequency.
+<li>Be clever when you implement the <code>innerProduct()</code> method; try to avoid quadratic runtime implementation.
+<li>Be aware that processing large files might lead to an integer overflow, which will cause an incorrect distance between two documents. Your code must be able to handle all given input files.
+<li>Start early. Plan your time accordingly.
+</ul>
+
+
+
+<hr> <h3>Starter Code</h3>
+<p>Download <a href="lab.zip">the starter code for assignment (zip file)</a>.
+
+<p>Once you finish implementation, you must turn in only Distance.java file.
+
+<hr> <h3>Grading</h3>
+<p>Your assignment will be graded first by compiling and testing it.
+After that, we will read your code to determine whether appropriate method/classes were used,
+as well as judge the overall style and modularity of your code. Points will be deducted for poor
+design decisions and un-commented, or un-readable or un-efficient code.
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
