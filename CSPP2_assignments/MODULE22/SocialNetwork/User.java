@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 class User{
-	private String username;
+	String username;
 	private int count = 0;
 	private String[] friend = new String[100];
 	public User(String uname,String[] list){
