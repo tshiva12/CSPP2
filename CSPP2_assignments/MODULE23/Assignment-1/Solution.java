@@ -99,7 +99,7 @@ public final class Solution {
             sum2 += hm2.get(str2) * hm2.get(str2);
             dot += hm1.get(str2) * hm2.get(str2);
         }
-        return ((int)((dot) / (Math.sqrt(sum1) * Math.sqrt(sum2)) * hundred));
+        return ((int) ((dot) / (Math.sqrt(sum1) * Math.sqrt(sum2)) * hundred));
     }
 
 }
