@@ -33,7 +33,8 @@ public final class Solution {
                     HashMap<String, Integer> hm2 = new HashMap<>();
                     String str;
                     while ((str = br1.readLine()) != null ) {
-                        String [] line = str.replaceAll("[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
+                        String [] line = str.replaceAll(
+                            "[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
                         for (String word : line) {
                             if (hm1.containsKey(word)) {
                                 hm1.put(word, hm1.get(word) + 1);
@@ -47,7 +48,8 @@ public final class Solution {
                     }
 
                     while ((str = br2.readLine()) != null ) {
-                        String [] str1 = str.replaceAll("[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
+                        String[] str1 = str.replaceAll(
+                            "[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
                         for (String word : str1) {
                             if (hm2.containsKey(word)) {
                                 hm2.put(word, hm2.get(word) + 1);
@@ -76,9 +78,8 @@ public final class Solution {
     /**
      * plagrism percentage calculation.
      *
-     * @param      freq   The frequency
-     * @param      freq2  The frequency 2
-     *
+     * @param      hm1   The hm 1
+     * @param      hm2   The hm 2
      * @return     return the plagarism percentage.
      */
     public static int plagarismpercentage(final HashMap<String, Integer> hm1,
