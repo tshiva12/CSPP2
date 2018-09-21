@@ -1,7 +1,7 @@
 import java.io.FileReader;
-import java.lang.*;
-import java.io.*;
-import java.util.*;
+import java.lang.*; //#1
+import java.io.*; //#2
+import java.util.*; //#3
 /**
  * Class for plagrism.
  */
