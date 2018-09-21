@@ -7,6 +7,12 @@ import java.util.*;
  */
 public final class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //default constructor.
+    }
+    /**
      * this is the main function.
      *
      * @param      args  The arguments
@@ -22,7 +28,7 @@ public final class Solution {
             String input1 = each.getAbsolutePath();
             System.out.println();
             System.out.print(each.toString().split("\\\\")[1] + "       \t");
-            for (File next : testfiles) {  
+            for (File next : testfiles) {
                 String input2 = next.getAbsolutePath();
                 try {
                     FileReader fr1 = new FileReader(input1);
@@ -32,8 +38,8 @@ public final class Solution {
                     HashMap<String, Integer> hm1 = new HashMap<>();
                     HashMap<String, Integer> hm2 = new HashMap<>();
                     String str;
-                    while ((str = br1.readLine()) != null ) {
-                        String [] line = str.replaceAll(
+                    while ((str = br1.readLine()) != null) {
+                        String[] line = str.replaceAll(
                             "[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
                         for (String word : line) {
                             if (hm1.containsKey(word)) {
@@ -47,7 +53,7 @@ public final class Solution {
                         }
                     }
 
-                    while ((str = br2.readLine()) != null ) {
+                    while ((str = br2.readLine()) != null) {
                         String[] str1 = str.replaceAll(
                             "[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
                         for (String word : str1) {
