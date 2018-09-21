@@ -5,13 +5,13 @@ import java.util.*;
 /**
  * Class for plagrism.
  */
-class Solution {
+public final class Solution {
     /**
      * this is the main function.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         File files = new File(scan.nextLine());
         File[] testfiles = files.listFiles();
@@ -107,11 +107,12 @@ class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int plagarismpercentage(HashMap<String, Integer> hm1,
-                                   HashMap<String, Integer> hm2) {
+    public static int plagarismpercentage(final HashMap<String, Integer> hm1,
+                                   final HashMap<String, Integer> hm2) {
         int sum1 = 0 ;
         int sum2 = 0;
         int dot = 0;
+        int hundred = 100;
         // System.out.println(freq + "    " + freq2);
         for (String str2 : hm1.keySet()) {
             sum1 += hm1.get(str2) * hm1.get(str2);
@@ -122,7 +123,7 @@ class Solution {
             // System.out.println(dot);
 
         }
-        return ((int)((dot / (Math.sqrt(sum1) * Math.sqrt(sum2))) * 100));
+        return ((int)((dot/(Math.sqrt(sum1) * Math.sqrt(sum2))) * hundred));
     }
 
 }
