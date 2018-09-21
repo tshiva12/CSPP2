@@ -18,7 +18,7 @@ class Solution {
         // System.out.println(Arrays.toString(testfiles));
         // System.out.print("\t\t");
         for (File filename : testfiles) {
-            System.out.print("\t" + filename.toString().split("\\\\")[1]);
+            System.out.print("      \t" + filename.toString().split("\\\\")[1]);
 
         }
         for (File each : testfiles) {
@@ -26,7 +26,7 @@ class Solution {
             // System.out.println(input1);
             System.out.println();
 
-            System.out.print(each.toString().split("\\\\")[1] + "\t");
+            System.out.print(each.toString().split("\\\\")[1] + "       \t");
             for (File next : testfiles) {  
                 String input2 = next.getAbsolutePath();
                 // System.out.println(input2);
