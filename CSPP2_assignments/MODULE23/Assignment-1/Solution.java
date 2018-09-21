@@ -109,10 +109,10 @@ public final class Solution {
      */
     public static int plagarismpercentage(final HashMap<String, Integer> hm1,
                                    final HashMap<String, Integer> hm2) {
-        int sum1 = 0 ;
+        int sum1 = 0;
         int sum2 = 0;
         int dot = 0;
-        int hundred = 100;
+        final int hundred = 100;
         // System.out.println(freq + "    " + freq2);
         for (String str2 : hm1.keySet()) {
             sum1 += hm1.get(str2) * hm1.get(str2);
@@ -123,7 +123,7 @@ public final class Solution {
             // System.out.println(dot);
 
         }
-        return ((int)((dot/(Math.sqrt(sum1) * Math.sqrt(sum2))) * hundred));
+        return ((int)((dot) / (Math.sqrt(sum1) * Math.sqrt(sum2)) * hundred));
     }
 
 }
