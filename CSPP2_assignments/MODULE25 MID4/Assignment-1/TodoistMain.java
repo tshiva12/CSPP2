@@ -120,24 +120,66 @@ class Task {
         return str;
     }
 }
+/**
+ * Class for todoist.
+ */
 class Todoist {
+    /**
+     * private task.
+     */
     private Task[] Task1;
+    /**
+     * Constructs the object.
+     */
     Todoist() {}
+    /**
+     * Constructs the object.
+     *
+     * @param      Task1  The task 1
+     */
     Todoist(Task[] Task1) {
         this.Task1 = Task1;
     }
+    /**
+     * Gets the task 1.
+     *
+     * @return     The task 1.
+     */
     public Task[] getTask1() {
         return this.Task1;
     }
+    /**
+     * Gets the next task.
+     *
+     * @param      s     string s.
+     *
+     * @return     The next task.
+     */
     public int getNextTask(String s) {
         return 0;
     }
+    /**
+     * Gets the next task.
+     *
+     * @param      s     string s.
+     * @param      n     int n.
+     *
+     * @return     The next task.
+     */
     public Task[] getNextTask(String s, int n) {
         return Task1;
     }
+    /**
+     * total time for completion.
+     *
+     * @return     return total time.
+     */
     public int totalTime4Completion() {
         return 0;
     }
+    /**
+     * Adds a task.
+     */
     public void addTask() {
     }
 }
