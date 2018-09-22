@@ -39,7 +39,8 @@ class Task {
      * @param      urgent          The urgent
      * @param      status          The status
      */
-    Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
+    Task(final String title, final String assignedTo, final int timeToComplete, 
+        final boolean important, final boolean urgent, final String status) {
         this.title = title;
         this.assignedTo = assignedTo;
         this.timeToComplete = timeToComplete;
@@ -155,7 +156,7 @@ class Todoist {
      *
      * @return     The next task.
      */
-    public int getNextTask(String s) {
+    public int getNextTask(final String s) {
         return 0;
     }
     /**
@@ -166,7 +167,7 @@ class Todoist {
      *
      * @return     The next task.
      */
-    public Task[] getNextTask(String s, int n) {
+    public Task[] getNextTask(final String s, final int n) {
         return Task1;
     }
     /**
@@ -187,7 +188,12 @@ class Todoist {
  * Class for todoist main.
  */
 public class TodoistMain {
-
+    /**
+     * Constructs the object.
+     */
+    TodoistMain() {
+        // defaul constructor.
+    }
     /**
      * Starts a test.
      */
