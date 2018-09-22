@@ -143,11 +143,12 @@ class Todoist {
      * private tasksize.
      */
     private int tasksize;
+    final int hundred = 100;
     /**
      * Constructs the object.
      */
     Todoist() {
-        task1 = new Task[100];
+        task1 = new Task[hundred];
         tasksize = 0;
     }
     /**
