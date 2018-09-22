@@ -136,18 +136,31 @@ class Task {
  */
 class Todoist {
     /**
-     * private task.
+     * private task1.
      */
     private Task[] task1;
-    // Task[] t1 = new Task();
+    /**
+     * private tasksize.
+     */
     private int tasksize;
+    /**
+     * Constructs the object.
+     */
     Todoist() {
         task1 = new Task[100];
         tasksize = 0;
     }
+    /**
+     * resize.
+     */
     public void resize() {
         task1 =Arrays.copyOf(task1, tasksize + 2);
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String str4 = "";
         for (int i = 0; i < tasksize; i++) {
@@ -155,12 +168,24 @@ class Todoist {
         }
         return str4;
     }
-    public Task getNextTask(final String s) {
-        return null;
+    /**
+     * Adds a task.
+     *
+     * @param      task2  The task 2
+     */
+    public void addTask(final Task task2) {
+        if (tasksize == task1.length) {
+            resize();
+        } else {
+            task1[tasksize++] = task2;
+        }
+
     }
-    public Task[] getNextTask(final String s, final int n) {
-        return null;
-    }
+    /**
+     * total time for completition.
+     *
+     * @return     return total time.
+     */
     public int totalTime4Completion() {
         int total = 0;
         for (int i = 0; i < tasksize; i++) {
@@ -172,21 +197,38 @@ class Todoist {
         return total;
     }
     /**
-     * Adds a task.
+     * Gets the next task.
+     *
+     * @param      s     string s.
+     *
+     * @return     The next task.
      */
-    public void addTask(Task task2) {
-        if (tasksize == task1.length) {
-            resize();
-        } else {
-            task1[tasksize++] = task2;
-        }
-
+    public Task getNextTask(final String s) {
+        return null;
     }
+    /**
+     * Gets the next task.
+     *
+     * @param      s     string s.
+     * @param      n     string n.
+     *
+     * @return     The next task.
+     */
+    public Task[] getNextTask(final String s, final int n) {
+        return null;
+    }
+    /**
+     * Gets the next task.
+     *
+     * @param      s     string s.
+     *
+     * @return     The next task.
+     */
 }
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+public final class TodoistMain {
     /**
      * Constructs the object.
      */
