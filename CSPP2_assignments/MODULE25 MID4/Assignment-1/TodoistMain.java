@@ -120,6 +120,11 @@ class Task {
      * @return     String representation of the object.
      */
     public String toString() {
+        if(getTitle() != "") {
+            return getTitle();
+        } else {
+            System.out.println(" Title not provided ");
+        }
         String str = "";
         str = getTitle() + ", " + getassignedTo() + ", " + gettimeToComplete() + ", "
          + getImportant() + ", " + getUrgent() + ", " + getStatus();
@@ -136,52 +141,26 @@ class Todoist {
     private Task[] task1;
     // Task[] t1 = new Task();
     private int tasksize;
-    /**
-     * Constructs the object.
-     */
-    Todoist() { }
-    /**
-     * Constructs the object.
-     *
-     * @param      Task1  The task 1
-     */
-    Todoist(Task[] task1) {
-        this.task1 = task1;
+    Todoist() {
+        task1 = new Task[100];
+        tasksize = 0;
     }
-    /**
-     * Gets the task 1.
-     *
-     * @return     The task 1.
-     */
-    public Task[] getTask1() {
-        return this.task1;
+    public void resize() {
+        task1 =Arrays.copyOf(task1, tasksize + 2);
     }
-    /**
-     * Gets the next task.
-     *
-     * @param      s     string s.
-     *
-     * @return     The next task.
-     */
-    public int getNextTask(final String s) {
-        return 0;
+    public String toString() {
+        String str4 = "";
+        for (int i = 0; i < tasksize; i++) {
+            str4 += task1[i] + "\n";
+        }
+        return str4;
     }
-    /**
-     * Gets the next task.
-     *
-     * @param      s     string s.
-     * @param      n     int n.
-     *
-     * @return     The next task.
-     */
+    public Task getNextTask(final String s) {
+        return null;
+    }
     public Task[] getNextTask(final String s, final int n) {
-        return task1;
+        return null;
     }
-    /**
-     * total time for completion.
-     *
-     * @return     return total time.
-     */
     public int totalTime4Completion() {
         int total = 0;
         for (int i = 0; i < tasksize; i++) {
@@ -195,7 +174,13 @@ class Todoist {
     /**
      * Adds a task.
      */
-    public void addTask() {
+    public void addTask(Task task2) {
+        if (tasksize == task1.length) {
+            resize();
+        } else {
+
+        }
+
     }
 }
 /**
