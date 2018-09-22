@@ -236,7 +236,7 @@ public class TodoistMain {
      */
     public static void testAddTask(final Todoist todo, final String[] tokens) {
         try {
-            // todo.addTask(createTask(tokens));
+            todo.addTask(createTask(tokens));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
