@@ -1,8 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
-
 /**
-  * write your code below this comment
+  * write your code below this comment.
   */
 class Task {
     /**
@@ -116,8 +115,8 @@ class Task {
      */
     public String toString() {
         String str = "";
-        str = getTitle() + ", " + getassignedTo() + ", " + gettimeToComplete() + ", " +
-         getImportant() + ", " + getUrgent() + ", " + getStatus();
+        str = getTitle() + ", " + getassignedTo() + ", " + gettimeToComplete() + ", "
+         + getImportant() + ", " + getUrgent() + ", " + getStatus();
         return str;
     }
 }
@@ -132,7 +131,7 @@ class Todoist {
     /**
      * Constructs the object.
      */
-    Todoist() {}
+    Todoist() { }
     /**
      * Constructs the object.
      *
