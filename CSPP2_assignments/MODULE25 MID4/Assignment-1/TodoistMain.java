@@ -178,7 +178,7 @@ class Todoist {
         if (tasksize == task1.length) {
             resize();
         } else {
-
+            task1[tasksize++] = task2;
         }
 
     }
