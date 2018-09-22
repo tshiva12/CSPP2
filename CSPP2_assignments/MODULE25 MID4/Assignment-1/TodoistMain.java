@@ -40,7 +40,7 @@ class Task {
     public String getUrgent() {
         String str2;
         if (this.urgent == true) {
-            str2 = "Ugrent";
+            str2 = "Urgent";
         } else {
             str2 = "Not Urgent";
         }
