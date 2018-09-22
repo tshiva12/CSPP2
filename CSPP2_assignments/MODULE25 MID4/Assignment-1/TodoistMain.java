@@ -5,12 +5,40 @@ import java.util.Arrays;
   * write your code below this comment
   */
 class Task {
+    /**
+     * private title.
+     */
     private String title;
+    /**
+     * private assignedTo.
+     */
     private String assignedTo;
+    /**
+     * private timeToComplete.
+     */
     private int timeToComplete;
+    /**
+     * private important.
+     */
     private boolean important;
+    /**
+     * private urgent.
+     */
     private boolean urgent;
+    /**
+     * private status.
+     */
     private String status;
+    /**
+     * Constructs the object.
+     *
+     * @param      title           The title
+     * @param      assignedTo      The assigned to
+     * @param      timeToComplete  The time to complete
+     * @param      important       The important
+     * @param      urgent          The urgent
+     * @param      status          The status
+     */
     Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
         this.title = title;
         this.assignedTo = assignedTo;
@@ -19,15 +47,36 @@ class Task {
         this.urgent = urgent;
         this.status = status;
     }
+    /**
+     * Gets the title.
+     *
+     * @return     The title.
+     */
     public String getTitle() {
         return this.title;
     }
+    /**
+     * Gets the assignedTo.
+     *
+     * @return     return assigned to.
+     */
     public String getassignedTo() {
         return this.assignedTo;
     }
+    /**
+     * Gets the time to complete the task.
+     *
+     * @return     return time to complete the task.
+     */
     public int gettimeToComplete() {
         return this.timeToComplete;
     }
+
+    /**
+     * Gets the important.
+     *
+     * @return     The important.
+     */
     public String getImportant() {
         String str1;
         if (this.important == true) {
@@ -37,6 +86,11 @@ class Task {
         }
         return str1;
     }
+    /**
+     * Gets the urgent.
+     *
+     * @return     The urgent.
+     */
     public String getUrgent() {
         String str2;
         if (this.urgent == true) {
@@ -46,9 +100,19 @@ class Task {
         }
         return str2;
     }
+    /**
+     * Gets the status.
+     *
+     * @return     The status.
+     */
     public String getStatus() {
         return this.status;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String str = "";
         str = getTitle() + ", " + getassignedTo() + ", " + gettimeToComplete() + ", " +
@@ -71,7 +135,7 @@ class Todoist {
     public Task[] getNextTask(String s, int n) {
         return Task1;
     }
-    public int totalTime4Completion(String s, int n) {
+    public int totalTime4Completion() {
         return 0;
     }
     public void addTask() {
