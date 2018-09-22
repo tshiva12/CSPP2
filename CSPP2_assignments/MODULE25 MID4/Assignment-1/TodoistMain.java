@@ -120,11 +120,11 @@ class Task {
      * @return     String representation of the object.
      */
     public String toString() {
-        if(getTitle() != "") {
-            return getTitle();
-        } else {
-            System.out.println(" Title not provided ");
-        }
+        // if(getTitle() != "") {
+        //     return getTitle();
+        // } else {
+        //     System.out.println(" Title not provided ");
+        // }
         String str = "";
         str = getTitle() + ", " + getassignedTo() + ", " + gettimeToComplete() + ", "
          + getImportant() + ", " + getUrgent() + ", " + getStatus();
