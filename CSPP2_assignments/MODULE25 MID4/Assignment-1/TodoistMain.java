@@ -30,6 +30,12 @@ class Task {
     private String status;
     /**
      * Constructs the object.
+     */
+    Task() {
+        // defauult constructor.
+    }
+    /**
+     * Constructs the object.
      *
      * @param      title           The title
      * @param      assignedTo      The assigned to
@@ -127,7 +133,9 @@ class Todoist {
     /**
      * private task.
      */
-    private Task[] Task1;
+    private Task[] task1;
+    // Task[] t1 = new Task();
+    private int tasksize;
     /**
      * Constructs the object.
      */
@@ -137,8 +145,8 @@ class Todoist {
      *
      * @param      Task1  The task 1
      */
-    Todoist(Task[] Task1) {
-        this.Task1 = Task1;
+    Todoist(Task[] task1) {
+        this.task1 = task1;
     }
     /**
      * Gets the task 1.
@@ -146,7 +154,7 @@ class Todoist {
      * @return     The task 1.
      */
     public Task[] getTask1() {
-        return this.Task1;
+        return this.task1;
     }
     /**
      * Gets the next task.
@@ -167,7 +175,7 @@ class Todoist {
      * @return     The next task.
      */
     public Task[] getNextTask(final String s, final int n) {
-        return Task1;
+        return task1;
     }
     /**
      * total time for completion.
@@ -175,7 +183,14 @@ class Todoist {
      * @return     return total time.
      */
     public int totalTime4Completion() {
-        return 0;
+        int total = 0;
+        for (int i = 0; i < tasksize; i++) {
+            if(task1[i].getStatus().equals("todo")) {
+                total += task1[i].gettimeToComplete();
+            }
+            
+        }
+        return total;
     }
     /**
      * Adds a task.
