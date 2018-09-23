@@ -14,7 +14,7 @@ public final class Solution {
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		try {
 		Frequency f = new Frequency();
 		Scanner sc = new Scanner(System.in);
@@ -30,13 +30,15 @@ public final class Solution {
 				if (i == j) {
 					result[i][j] = hun;
 				} else {
-					result[i][j] = Frequency.similarity(Frequency.toString(
-						filelist[i]), Frequency.toString(filelist[j]));
+					result[i][j] = Frequency.similarity(
+						Frequency.toString(filelist[i]),
+						 Frequency.toString(filelist[j]));
 				}
 				if (max < result[i][j]) {
 					max = result[i][j];
 					res = "Maximum similarity is in between "
-					 + filelist[i].getName() + " and " + filelist[j].getName();
+					 + filelist[i].getName()
+					  + " and " + filelist[j].getName();
 				}
 			}
 		}
