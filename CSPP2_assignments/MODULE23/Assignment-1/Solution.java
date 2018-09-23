@@ -24,12 +24,14 @@ public final class Solution {
             File files = new File(scan.nextLine());
             File[] testfiles = files.listFiles();
             for (File filename : testfiles) {
-                System.out.print("      \t" + filename.toString().split("\\\\")[1]);
+                System.out.print("      \t"
+                 + filename.toString().split("\\\\")[1]);
             }
             for (File each : testfiles) {
                 String input1 = each.getAbsolutePath();
                 System.out.println();
-                System.out.print(each.toString().split("\\\\")[1] + "       \t");
+                System.out.print(each.toString().split("\\\\")[1]
+                 + "       \t");
                 for (File next : testfiles) {
                     String input2 = next.getAbsolutePath();
                     FileReader fr1 = new FileReader(input1);
@@ -71,7 +73,7 @@ public final class Solution {
                 }
             }
             System.out.println();
-        } catch(Exception e) {
+        }catch(Exception e) {
             System.out.println("empty directory");
         }
     }
