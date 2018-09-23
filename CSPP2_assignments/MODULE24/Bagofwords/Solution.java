@@ -1,8 +1,16 @@
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
+import java.util.HashMap;
+import java.io.File;
+/**
+ * Main class.
+ */
 public final class Solution {
+	/**
+	 * main function.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
-		try {
 		Frequency f = new Frequency();
 		Scanner sc = new Scanner(System.in);
 		File fileinput = new File(sc.next());
@@ -11,10 +19,11 @@ public final class Solution {
 		String res = "";
 		int len1 = filelist.length;
 		int[][] result = new int[len1][len1];
+		final int hun = 100;
 		for (int i = 0; i < len1; i++) {
 			for (int j = 0; j < len1; j++) {
 				if (i == j) {
-					result[i][j] = 100;
+					result[i][j] = hun;
 				} else {
 					result[i][j] = Frequency.similarity(Frequency.toString(filelist[i]),Frequency.toString(filelist[j]));
 				}
@@ -37,8 +46,5 @@ public final class Solution {
 			System.out.println();
 		}
 		System.out.println(res);
-		} catch (NoSuchElementException e) {
-		System.out.println("empty directory");
-		}
 	}
 }
