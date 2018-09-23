@@ -18,7 +18,8 @@ public final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner scan = new Scanner(System.in);
+        try {
+            Scanner scan = new Scanner(System.in);
         File files = new File(scan.nextLine());
         File[] testfiles = files.listFiles();
         for (File filename : testfiles) {
@@ -80,7 +81,12 @@ public final class Solution {
             }
 
         }
-        System.out.println();    }
+        System.out.println();
+    } catch(Exception e) {
+        System.out.println("empty directory");
+    }
+        
+    }
     /**
      * plagrism percentage calculation.
      *
