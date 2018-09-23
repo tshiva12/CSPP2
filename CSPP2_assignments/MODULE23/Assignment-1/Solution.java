@@ -73,7 +73,7 @@ public final class Solution {
                 }
             }
             System.out.println();
-        }catch(Exception e) {
+        } catch (Exception e) {
             System.out.println("empty directory");
         }
     }
