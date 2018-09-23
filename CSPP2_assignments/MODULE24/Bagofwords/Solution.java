@@ -11,6 +11,7 @@ public final class Solution {
 	 * @param      args  The arguments
 	 */
 	public static void main(String[] args) {
+		try {
 		Frequency f = new Frequency();
 		Scanner sc = new Scanner(System.in);
 		File fileinput = new File(sc.next());
@@ -46,5 +47,8 @@ public final class Solution {
 			System.out.println();
 		}
 		System.out.println(res);
+		} catch (Exception e) {
+			System.out.println("empty directory");
+		}
 	}
 }
