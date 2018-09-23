@@ -1,7 +1,8 @@
 import java.io.FileReader;
-import java.lang.*; //#1
-import java.io.*; //#2
-import java.util.*; //#3
+import java.io.BufferedReader;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Scanner;
 /**
  * Class for plagrism.
  */
@@ -20,18 +21,17 @@ public final class Solution {
     public static void main(final String[] args) {
         try {
             Scanner scan = new Scanner(System.in);
-        File files = new File(scan.nextLine());
-        File[] testfiles = files.listFiles();
-        for (File filename : testfiles) {
-            System.out.print("      \t" + filename.toString().split("\\\\")[1]);
-        }
-        for (File each : testfiles) {
-            String input1 = each.getAbsolutePath();
-            System.out.println();
-            System.out.print(each.toString().split("\\\\")[1] + "       \t");
-            for (File next : testfiles) {
-                String input2 = next.getAbsolutePath();
-                try {
+            File files = new File(scan.nextLine());
+            File[] testfiles = files.listFiles();
+            for (File filename : testfiles) {
+                System.out.print("      \t" + filename.toString().split("\\\\")[1]);
+            }
+            for (File each : testfiles) {
+                String input1 = each.getAbsolutePath();
+                System.out.println();
+                System.out.print(each.toString().split("\\\\")[1] + "       \t");
+                for (File next : testfiles) {
+                    String input2 = next.getAbsolutePath();
                     FileReader fr1 = new FileReader(input1);
                     FileReader fr2 = new FileReader(input2);
                     BufferedReader br1 = new BufferedReader(fr1);
@@ -41,10 +41,10 @@ public final class Solution {
                     String str;
                     while ((str = br1.readLine()) != null) {
                         String[] line = str.replaceAll(
-                            "[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
+                           "[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
                         for (String word : line) {
                             if (hm1.containsKey(word)) {
-                                hm1.put(word, hm1.get(word) + 1);
+                            hm1.put(word, hm1.get(word) + 1);
                             } else {
                                 hm1.put(word, 1);
                             }
@@ -53,14 +53,12 @@ public final class Solution {
                             }
                         }
                     }
-
                     while ((str = br2.readLine()) != null) {
                         String[] str1 = str.replaceAll(
                             "[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
                         for (String word : str1) {
                             if (hm2.containsKey(word)) {
                                 hm2.put(word, hm2.get(word) + 1);
-
                             } else {
                                 hm2.put(word, 1);
                             }
@@ -70,22 +68,12 @@ public final class Solution {
                         }
                     }
                     System.out.print(plagarismpercentage(hm1, hm2) + "\t");
-                } catch (FileNotFoundException e) {
-                    System.out.println("File not Found");
-
-                } catch (IOException e) {
-                    System.out.println("Invalid Input");
-
                 }
-
             }
-
+            System.out.println();
+        } catch(Exception e) {
+            System.out.println("empty directory");
         }
-        System.out.println();
-    } catch(Exception e) {
-        System.out.println("empty directory");
-    }
-        
     }
     /**
      * plagrism percentage calculation.
