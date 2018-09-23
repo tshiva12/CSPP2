@@ -56,7 +56,7 @@ public final class Solution {
         }
         System.out.println(res);
         } catch (Exception e) {
-            System.out.println("empty directory");
+            System.out.println("Empty Directory");
         }
     }
 }
